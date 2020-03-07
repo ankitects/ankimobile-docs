@@ -1,4 +1,4 @@
-- [Intro](README.md)
+- [Intro](/)
 - [Getting Started](getting-started.md)
 - [Studying](studying.md)
 - [Adding & Editing](editing.md)

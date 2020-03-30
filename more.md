@@ -34,22 +34,22 @@ documentation](https://apps.ankiweb.net/docs/manual.html#filtered).
 
 AnkiMobile 2.0.56+ supports using TTS tags in card templates. Please see
 [the computer
-manual](https://apps.ankiweb.net/docs/manual.html#text-to-speech) for
+manual](https://docs.ankiweb.net/#/templates/fields?id=text-to-speech) for
 more information.
 
 To get the best quality sound, please go to the iOS Settings app, then:
 
--   Tap on Accessibility
+- Tap on Accessibility
 
--   Tap on VoiceOver
+- Tap on VoiceOver
 
--   Tap on Speech
+- Tap on Speech
 
--   Tap on Voice
+- Tap on Voice
 
--   Tap on the voice you want to use
+- Tap on the voice you want to use
 
--   If there is an (Enhanced) version available, download it.
+- If there is an (Enhanced) version available, download it.
 
 Please note that Apple limit Siri to their own apps, so you will need to
 pick a voice other than Siri.
@@ -83,14 +83,18 @@ If you wanted a grey background instead of black, you could use
 something like:
 
 ```css
-.card.nightMode { background-color: #555; }
+.card.nightMode {
+  background-color: #555;
+}
 ```
 
 If you have a 'myclass' style, the following would show the text in
 yellow when night mode is enabled:
 
 ```css
-.nightMode .myclass { color: yellow; }
+.nightMode .myclass {
+  color: yellow;
+}
 ```
 
 ## URL schemes
@@ -124,11 +128,11 @@ anki://x-callback-url/addnote?
 After the first part, keys and values are separated by an ampersand. The
 following keys must always be provided:
 
--   profile=&lt;profile name&gt;
+- profile=&lt;profile name&gt;
 
--   type=&lt;note type name&gt;
+- type=&lt;note type name&gt;
 
--   deck=&lt;deck name&gt;
+- deck=&lt;deck name&gt;
 
 Fields are entered by prefixing their name with "fld". So if your first
 field is called "Text", the key would be "fldText". The field text is
@@ -142,13 +146,13 @@ useful.
 
 The remaining keys are optional:
 
--   tags=&lt;tags separated by space&gt;
+- tags=&lt;tags separated by space&gt;
 
--   dupes=1 - if provided, allow a note to be added even if the same
-    content is on an existing note.
+- dupes=1 - if provided, allow a note to be added even if the same
+  content is on an existing note.
 
--   x-success=&lt;url scheme for another app&gt; - use to automatically
-    return to another app after the note is added.
+- x-success=&lt;url scheme for another app&gt; - use to automatically
+  return to another app after the note is added.
 
 If a field you provide is a link to an image or audio file, AnkiMobile
 will automatically download that media and place a link to it in the

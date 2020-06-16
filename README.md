@@ -3,22 +3,19 @@
 Thank you for buying AnkiMobile! Anki development would not be able to
 continue without your support, so it is greatly appreciated.
 
-As mentioned on the app store page, AnkiMobile is currently intended to
-be used in conjunction with Anki on your computer. While it is possible
-to download shared decks, study, and edit the content of your notes,
-certain actions are currently only possible on the computer version.
-While this is expected to change over time, for now please ensure you
-have access to a computer in order to perform some of the operations
-mentioned below.
-
 Some basic concepts covered in the [computer
 manual](https://apps.ankiweb.net/docs/manual.html) are not repeated
 here, so please check it out if you have not already done so.
 
 ## Support
 
-There’s a dedicated [support site](https://anki.tenderapp.com/) for
-questions, suggestions and bug reports.
+There are two ways to get help with AnkiMobile. Both are regularly checked
+by Anki's developer, so please pick the one you prefer.
+
+- There is a [new public forum](https://forums.ankiweb.net/c/ankimobile/10)
+  (and an [old one](https://anki.tenderapp.com/discussions/ankimobile) that is being phased out).
+- There is a [private helpdesk](https://anki.tenderapp.com/discussions/private) - messages
+  posted here will not be visible to other users.
 
 ## Privacy
 

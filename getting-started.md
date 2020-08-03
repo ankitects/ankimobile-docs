@@ -85,6 +85,8 @@ to AnkiMobile, you’d repeat the same process: sync on desktop (or close
 the program, as it syncs automatically on close by default), and then
 tap the sync button on AnkiMobile.
 
+The sync button will change colour when a normal or full sync is required.
+
 ## iTunes Import/Export
 
 If you don’t have regular internet access, it’s still possible to copy

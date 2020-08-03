@@ -3,5 +3,5 @@
 - [Studying](studying.md)
 - [Adding & Editing](editing.md)
 - [Preferences](preferences.md)
+- [Interface Language](interface-language.md)
 - [More Features](more.md)
-

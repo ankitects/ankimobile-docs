@@ -4,4 +4,6 @@
 - [Adding & Editing](editing.md)
 - [Preferences](preferences.md)
 - [Interface Language](interface-language.md)
+- [Reinstalling](reinstalling.md)
+- [Beta Testing](beta-testing.md)
 - [More Features](more.md)

@@ -66,7 +66,7 @@ device’s mute/vibrate switch is enabled.
 AnkiMobile allows you to use non-system fonts on your cards. To set them
 up, the desktop client is required. Please see [the section in the
 desktop
-manual](https://apps.ankiweb.net/docs/manual.html#installingfonts) for
+manual](https://docs.ankiweb.net/#/templates/styling?id=installing-fonts) for
 more information.
 
 Please note that AnkiMobile has to load the entire font into memory in

@@ -10,7 +10,8 @@ here, so please check it out if you have not already done so.
 ## Support
 
 There are two ways to get help with AnkiMobile. Both are regularly checked
-by Anki's developer, so please pick the one you prefer.
+by Anki's developer, so there's no need to post the same question on both
+sites - please pick the one you prefer.
 
 - There is a [new public forum](https://forums.ankiweb.net/c/ankimobile/10)
   (and an [old one](https://anki.tenderapp.com/discussions/ankimobile) that is being phased out). This is a better choice for general usage questions, as other members of

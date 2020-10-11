@@ -35,6 +35,12 @@ Anki has a free cloud synchronization service called AnkiWeb that makes
 it easy to keep your card decks in sync between mobile devices and your
 computer.
 
+### Intro Videos
+
+Please check out the [syncing intro videos](https://www.youtube.com/watch?v=YkiM4DPzSVc&list=PLGgmaKOIHykFoomqkBJAyGiDQ2kyiuTao) on YouTube, or read on.
+
+### Creating an Account
+
 To sync with AnkiWeb, you’ll first need to create an account. If you
 have used AnkiWeb in the past, you can skip this step.
 

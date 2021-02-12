@@ -12,6 +12,7 @@ create-missing = true
 #no-section-label = true
 git-repository-url = "https://github.com/ankitects/ankimobile-docs/"
 
+# this breaks GHA when enabled - output goes into a 'html' subdir
 #[output.linkcheck]
 #optional = true
 #warning-policy = "warn"

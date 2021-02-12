@@ -35,7 +35,7 @@ fingers on it.
 
 **Square root**  
 Only available in iOS 13+. Shortcuts to subscript/superscript, and
-[MathJax](more.md#mathjax).
+[MathJax](mathjax.md).
 
 **Eye**  
 Shows a preview of how the card will appear when reviewed.
@@ -53,14 +53,14 @@ To edit a note, tap the "Edit" button while reviewing.
 The edit screen is similar to the adding screen mentioned above, with
 some key differences:
 
--   There is no note type selection button or deck selection button. If
-    you want to change the type of an existing note, you currently need
-    to do so with the computer version of Anki.
+- There is no note type selection button or deck selection button. If
+  you want to change the type of an existing note, you currently need
+  to do so with the computer version of Anki.
 
--   There is a "Tools" button at the top of the screen. Tapping on it
-    will allow you to perform actions on the current card or note.
-    Please see the [action descriptions](studying.md#actions) for more information
-    on what each action does.
+- There is a "Tools" button at the top of the screen. Tapping on it
+  will allow you to perform actions on the current card or note.
+  Please see the [action descriptions](study-tools.md#actions) for more information
+  on what each action does.
 
 ## Browsing
 

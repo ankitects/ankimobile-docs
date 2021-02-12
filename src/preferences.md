@@ -9,9 +9,8 @@ covered below.
 
 ## Syncing
 
-The syncing screen allows you to customize cloud synchronization with
-AnkiWeb. For more information on syncing with the cloud, please see
-[this section](getting-started.md).
+The syncing screen allows you to customize [cloud synchronization](syncing.md) with
+AnkiWeb.
 
 **Sync Sounds & Images**  
 By default, AnkiMobile will sync sounds and images as well as your cards
@@ -104,7 +103,7 @@ reminding you to study and telling you how many reviews are waiting.
 
 You can assign frequently used actions to the top bar for convenient
 access. For an explanation of the available actions, please see the
-[actions list](studying.md#actions).
+[actions list](study-tools.md#actions).
 
 ### Bottom Bar
 
@@ -220,7 +219,7 @@ Taps near the middle of the screen will be ignored.
 
 You can assign frequently used actions to taps for convenient access.
 For an explanation of the available actions, please see the [actions
-list](studying.md#actions).
+list](study-tools.md#actions).
 
 ### Swipes
 
@@ -235,13 +234,13 @@ relevant swipe.
 
 With the default settings:
 
--   Swiping left displays the tools window
+- Swiping left displays the tools window
 
--   Swiping right returns to the deck list
+- Swiping right returns to the deck list
 
 You can assign frequently used actions to swipes for convenient access.
 For an explanation of the available actions, please see the [actions
-list](studying.md##actions).
+list](study-tools.md#actions).
 
 ### Scratchpad
 
@@ -278,8 +277,7 @@ actions are triggered when each button is pressed. You can assign an
 action to each direction on the d-pad, but the analog thumbpads can not
 be customized - they will always scroll the card up or down.
 
-General
--------
+## General
 
 **Legacy Editor**  
 When enabled, Anki uses an older editor that has fewer features. It is
@@ -287,8 +285,7 @@ provided for users stuck on iOS 12 or earlier, who use right-to-left
 languages. If you are on iOS 13 or don’t use a right-to-left language,
 the regular editor is a better choice.
 
-Theme
------
+## Theme
 
 The theme screen allows you to customize the bar colours AnkiMobile
 uses. The available options will depend on whether night mode or iOS
@@ -299,8 +296,7 @@ card templates. You can do this using the Card Template action in the
 tools screen, or by using the computer version. For more info, please
 see <http://www.youtube.com/watch?v=F1j1Zx0mXME&yt:cc=on>
 
-Profiles
---------
+## Profiles
 
 Profiles allow multiple users to study with the same device. You can add
 profiles from the settings screen. To rename or remove a profile, swipe
@@ -310,8 +306,7 @@ Each profile needs to be synced with its own AnkiWeb account. Please be
 careful not to sync two profiles with the same AnkiWeb ID, as this could
 lead to data loss.
 
-Backups
--------
+## Backups
 
 AnkiMobile will automatically create backups of your collection for you.
 The backups include all your cards and statistics, but do not include
@@ -328,6 +323,7 @@ and tap on the backup you wish to restore to.
 It is also possible to customize the frequency and amount of backups
 that are created, via the settings at the top of the backups section.
 You can change 15 to a different number to adjust the number of backups
+
 - set it to zero to disable backups completely.
 
 If you’re unable to get AnkiMobile to start due to a serious error, you
@@ -347,16 +343,14 @@ can still retrieve the backups from the iTunes file sharing area:
     apkg from within that profile to confirm that it’s ok. If it is
     corrupt, you can try a previous backup.
 
-Check Database
---------------
+## Check Database
 
 This will check your collection for a number of possible errors and fix
 them if possible.
 
 It also will remove any tags that are no longer used by any cards.
 
-Check Media
------------
+## Check Media
 
 This scans all your notes for references to sounds and images, and then
 checks to make sure that the sounds and images are available. It will

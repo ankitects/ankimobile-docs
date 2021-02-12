@@ -1,105 +1,4 @@
-# Studying
-
-## The Deck List
-
-The deck list is the screen you see when you start AnkiMobile. It
-displays a list of your card decks, and provides buttons for performing
-various actions.
-
-Next to each deck, two numbers are displayed. The top, green number
-corresponds to how many cards are due to be reviewed again today. On a
-deck you’ve never studied before, there won’t be any cards waiting for
-review. The second, blue number, corresponds to how many new cards you
-have to learn today. Anki will introduce 20 new cards a day by default,
-and you can customize this number in the deck options if you’d like.
-
-To study cards in a deck, simply tap on the deck, and AnkiMobile will
-switch to study mode.
-
-If you wish to rename or delete a deck, swipe your finger from right to
-left over it, and buttons will appear.
-
-At the top of the screen, you’ll see four buttons.
-
--   The question mark opens this help page
-
--   The graph icon opens the deck statistics screen.
-
--   The magnifying glass opens the card browser.
-
--   The gear/cog opens the preferences screen.
-
-On the bottom of the screen, there are two more buttons. **Add/Export**
-allows you to download shared decks, add/create an empty deck, and
-import/export .apkg files from iTunes. **Synchronize** synchronizes your
-cards with the cloud.
-
-The synchronize button will change color if you have made changes that
-need to be synchronized to AnkiWeb, or if changes are waiting on AnkiWeb
-that need to be synchronized to the device. One of the changes that Anki
-synchronizes to other clients is the current deck, so tapping on a deck
-will change the button color, even if you do not study any cards.
-
-## The Study Screen
-
-If you have not used Anki on a computer before, please have a look at
-the first [intro
-video](https://apps.ankiweb.net/docs/manual.html#_intro_videos) before
-reading on, as it explains the basic review process.
-
-When you tap on a deck in the deck list, the study screen will load, and
-if any cards are waiting to be studied, a card’s question will be shown
-to you.
-
-If you wish to change to a different deck, you can do so by tapping the
-top left button. The next three buttons allow you to add cards, edit the
-current card, and search/browse all cards.
-
-The gear/cog in the bottom right will open up the [tools
-screen](#the-tools-screen).
-
-On the bottom of the screen you’ll see three numbers. From the left,
-these correspond to new cards, learning cards, and cards to review.
-These are explained in more detail in the intro videos for the desktop
-program, so please [check them
-out](https://apps.ankiweb.net/docs/manual.html#_intro_videos) if you
-haven’t already.
-
-When you’ve looked at a card’s question and remembered the answer, or
-decided you don’t know it, tap anywhere in the card area in order to
-show the answer. When you do, the bottom area will change to display 2-4
-answer buttons, depending on how you’ve answered the card previously.
-The buttons will display the time a card will next be shown, so 10m
-means "10 minutes" and "5d" means "5 days". You can tap directly on
-these buttons to choose a particular answer.
-
-To make reviewing faster, you can also tap on the card in order to
-answer it. For more information on the available taps and how to
-customize them, please see the [taps](preferences.md#taps) section.
-
-If you are studying content for which it is useful to sketch something
-before showing the answer on the card (e.g., characters in a foreign
-language), AnkiMobile provides a feature called the 'scratchpad' (the
-analogous feature is called the 'whiteboard' in AnkiDroid). You can
-enable the scratchpad by tapping on the tools button, then "Scratchpad".
-
-When you’ve finished the cards that are due to be studied today, you’ll
-be shown a congratulations message. If you have other decks, you can tap
-the top left button to return to the decks list and select a different
-one.
-
-You can tap the home button to close Anki and save your progress at any
-time, whether you have completed the day’s reviews or not.
-
-If you wish to keep studying the same cards after the congratulations
-message is displayed, please see the [filtered deck](more.md#filtered-decks) section.
-
-If you have a bluetooth keyboard, you can use the keyboard to review.
-Space will show the answer or answer Good, and 1-4 will choose the
-answer buttons. You can also press 'r' to repeat the audio on the
-current card.
-
-## The Tools Screen
+# Study Tools
 
 The tools screen will open when you tap on the gear/cog icon in the
 study screen.
@@ -282,8 +181,7 @@ Makes any buried cards in the current deck ready for review again.
 **Undo**  
 Undoes the last review.
 
-Study Options
-=============
+# Study Options
 
 The study options can be accessed from the [tools](#the-tools-screen) screen.
 Almost all the options available in the computer version can also be

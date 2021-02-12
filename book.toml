@@ -1,0 +1,18 @@
+[book]
+authors = ["Ankitects Pty Ltd and contributors"]
+language = "en"
+multilingual = false
+src = "src"
+title = "AnkiMobile Manual"
+
+[build]
+create-missing = true
+
+[output.html]
+#no-section-label = true
+git-repository-url = "https://github.com/ankitects/ankimobile-docs/"
+
+[output.linkcheck]
+optional = true
+warning-policy = "warn"
+follow-web-links = true

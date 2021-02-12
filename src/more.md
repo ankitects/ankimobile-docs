@@ -2,7 +2,7 @@
 
 ## Javascript
 
-The [warnings](https://apps.ankiweb.net/docs/manual.html#javascript)
+The [warnings](https://docs.ankiweb.net/#/templates/styling?id=javascript)
 that apply to the computer version also apply to AnkiMobile.
 
 In addition to the above, another thing to be aware of in AnkiMobile is
@@ -17,7 +17,7 @@ taps through to the element.
 ## Play Buttons
 
 To change the styling of the audio replay buttons, please see
-<https://apps.ankiweb.net/docs/manual.html#audio-replay-buttons>
+<https://docs.ankiweb.net/#/templates/styling?id=audio-replay-buttons>
 
 ## Image Resizing
 
@@ -26,4 +26,3 @@ resized to have a maximum length of 1024 along its longest edge.
 
 Recent Anki versions allow you to customize this limit in the **Preferences >
 General** screen.
-

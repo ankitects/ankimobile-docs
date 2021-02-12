@@ -14,7 +14,7 @@ top left button. The next three buttons allow you to add cards, edit the
 current card, and search/browse all cards.
 
 The gear/cog in the bottom right will open up the [tools
-screen](#the-tools-screen).
+screen](study-tools.md).
 
 On the bottom of the screen you’ll see three numbers. From the left,
 these correspond to new cards, learning cards, and cards to review.

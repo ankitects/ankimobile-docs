@@ -183,7 +183,7 @@ Undoes the last review.
 
 # Study Options
 
-The study options can be accessed from the [tools](#the-tools-screen) screen.
+The study options can be accessed from the tools screen.
 Almost all the options available in the computer version can also be
 adjusted in AnkiMobile. For a description of what everything does,
 please see the [computer

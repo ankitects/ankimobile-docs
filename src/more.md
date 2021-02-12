@@ -26,4 +26,3 @@ resized to have a maximum length of 1024 along its longest edge.
 
 Recent Anki versions allow you to customize this limit in the **Preferences >
 General** screen.
-

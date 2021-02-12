@@ -12,7 +12,7 @@ create-missing = true
 #no-section-label = true
 git-repository-url = "https://github.com/ankitects/ankimobile-docs/"
 
-[output.linkcheck]
-optional = true
-warning-policy = "warn"
-follow-web-links = true
+#[output.linkcheck]
+#optional = true
+#warning-policy = "warn"
+#follow-web-links = true

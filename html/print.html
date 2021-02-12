@@ -1,0 +1,1329 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>AnkiMobile Manual</title>
+        
+        <meta name="robots" content="noindex" />
+        
+        
+
+
+        <!-- Custom HTML head -->
+        
+
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        
+        <link rel="icon" href="favicon.svg">
+        
+        
+        <link rel="shortcut icon" href="favicon.png">
+        
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        
+        <link rel="stylesheet" href="css/print.css" media="print">
+        
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        
+        <link rel="stylesheet" href="fonts/fonts.css">
+        
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="intro.html"><strong aria-hidden="true">1.</strong> Intro</a></li><li class="chapter-item expanded "><a href="support.html"><strong aria-hidden="true">2.</strong> Support</a></li><li class="chapter-item expanded "><a href="interface-language.html"><strong aria-hidden="true">3.</strong> Interface Language</a></li><li class="chapter-item expanded "><a href="syncing.html"><strong aria-hidden="true">4.</strong> Cloud Sync</a></li><li class="chapter-item expanded "><a href="shared-decks.html"><strong aria-hidden="true">5.</strong> Shared Decks</a></li><li class="chapter-item expanded "><a href="deck-list.html"><strong aria-hidden="true">6.</strong> Deck List</a></li><li class="chapter-item expanded "><a href="study-screen.html"><strong aria-hidden="true">7.</strong> Study Screen</a></li><li class="chapter-item expanded "><a href="study-tools.html"><strong aria-hidden="true">8.</strong> Study Tools</a></li><li class="chapter-item expanded "><a href="editing.html"><strong aria-hidden="true">9.</strong> Adding &amp; Editing</a></li><li class="chapter-item expanded "><a href="preferences.html"><strong aria-hidden="true">10.</strong> Preferences</a></li><li class="chapter-item expanded "><a href="collection-transfer.html"><strong aria-hidden="true">11.</strong> Collection Transfer</a></li><li class="chapter-item expanded "><a href="tts.html"><strong aria-hidden="true">12.</strong> Text to Speech</a></li><li class="chapter-item expanded "><a href="mathjax.html"><strong aria-hidden="true">13.</strong> MathJax</a></li><li class="chapter-item expanded "><a href="custom-fonts.html"><strong aria-hidden="true">14.</strong> Custom Fonts</a></li><li class="chapter-item expanded "><a href="night-mode.html"><strong aria-hidden="true">15.</strong> Night Mode Styling</a></li><li class="chapter-item expanded "><a href="url-schemes.html"><strong aria-hidden="true">16.</strong> URL Schemes</a></li><li class="chapter-item expanded "><a href="reinstalling.html"><strong aria-hidden="true">17.</strong> Reinstalling</a></li><li class="chapter-item expanded "><a href="beta-testing.html"><strong aria-hidden="true">18.</strong> Beta Testing</a></li><li class="chapter-item expanded "><a href="more.html"><strong aria-hidden="true">19.</strong> More Features</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                        
+                    </div>
+
+                    <h1 class="menu-title">AnkiMobile Manual</h1>
+
+                    <div class="right-buttons">
+                        
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        
+                        
+                        <a href="https://github.com/ankitects/ankimobile-docs/" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1><a class="header" href="#introduction" id="introduction">Introduction</a></h1>
+<p>Thank you for buying AnkiMobile! Anki development would not be able to
+continue without your support, so it is greatly appreciated.</p>
+<p>Some basic concepts covered in the <a href="https://docs.ankiweb.net">computer
+manual</a> are not repeated
+here, so please check it out if you have not already done so.</p>
+<h2><a class="header" href="#legal" id="legal">Legal</a></h2>
+<p><strong>Privacy</strong></p>
+<p>No data you store in AnkiMobile is shared with us or other Anki users by
+default. If you use the optional synchronization feature, please see
+<a href="https://ankiweb.net/account/privacy">AnkiWeb’s privacy policy</a>.</p>
+<p><strong>Trademarks</strong></p>
+<p>Apple, the Apple logo, iPhone, iPad and iPod Touch are trademarks of
+Apple Inc., registered in the U.S. and other countries. App Store is a
+service mark of Apple Inc.</p>
+<h1><a class="header" href="#support" id="support">Support</a></h1>
+<p>There are two ways to get help with AnkiMobile. Both are regularly checked
+by Anki's developer, so there's no need to post the same question on both
+sites - please pick the one you prefer.</p>
+<ul>
+<li>There is a <a href="https://forums.ankiweb.net/c/ankimobile/10">new public forum</a>
+This is a better choice for general usage questions, as other members of
+the community may be able to answer you faster.</li>
+<li>There is a <a href="https://anki.tenderapp.com/discussions/private">private helpdesk</a> - messages
+posted here will not be visible to other users.</li>
+</ul>
+<h1><a class="header" href="#user-interface-language" id="user-interface-language">User Interface Language</a></h1>
+<p>AnkiMobile's interface has been translated into a few different languages. Your
+iOS settings control which language AnkiMobile will appear in.</p>
+<h2><a class="header" href="#wrong-language" id="wrong-language">Wrong Language</a></h2>
+<p>If AnkiMobile is not appearing in your desired language, please go to the <strong>iOS
+Settings app &gt; General &gt; Language &amp; Region</strong>. In that section, you can specify
+the languages you prefer. If you want English to be used in AnkiMobile, please
+ensure English is listed above the language you don't want to see. If your
+native language is not English, you can put your native language first.</p>
+<p>You can see
+the list of available languages on AnkiMobile's app store page.</p>
+<h2><a class="header" href="#app-specific-settings" id="app-specific-settings">App-specific settings</a></h2>
+<p>If you are on iOS 13, you can also control the language on a per-app basis. For
+example, if you want all apps on your device to appear in Chinese, but want Anki
+to show in English, you can do this by going to the Settings app.</p>
+<ol>
+<li>Go to the <strong>iOS Settings app &gt; General &gt; Language &amp; Region</strong>.</li>
+<li>If only one language is shown in the <strong>Preferred Language Order</strong> section,
+add the other language you wish to use as the second preference. If you have
+two or more languages shown already, you can skip this step.</li>
+<li>Go back to the first screen of the iOS Settings app.</li>
+<li>Scroll down to the list of apps at the bottom, and locate Anki.</li>
+<li>Tap on Anki, and choose the language you wish to use.</li>
+</ol>
+<p>Some users have reported that AnkiMobile did not appear in the iOS Settings screen
+until they went into AnkiMobile's <strong>Preferences &gt; Review &gt; Notifications</strong> section and
+enabled notifications.</p>
+<h2><a class="header" href="#new-translations" id="new-translations">New Translations</a></h2>
+<p>If you would like to help translate AnkiMobile into another language, please see <a href="https://translating.ankiweb.net">https://translating.ankiweb.net</a></p>
+<h1><a class="header" href="#cloud-sync" id="cloud-sync">Cloud Sync</a></h1>
+<p>Anki has a free cloud synchronization service called AnkiWeb that makes
+it easy to keep your card decks in sync between mobile devices and your
+computer. If you are an existing Anki user with cards on your computer,
+syncing is the easiest way to start using those cards on your mobile device
+as well.</p>
+<h2><a class="header" href="#intro-videos" id="intro-videos">Intro Videos</a></h2>
+<p>Please check out these short videos that explain syncing:</p>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=YkiM4DPzSVc&amp;list=PLGgmaKOIHykFoomqkBJAyGiDQ2kyiuTao">Initial Setup</a></li>
+<li><a href="https://www.youtube.com/watch?v=phP9GGG-PxY&amp;list=PLGgmaKOIHykFoomqkBJAyGiDQ2kyiuTao&amp;index=2">Syncing Sounds and Images</a></li>
+<li><a href="https://www.youtube.com/watch?v=UEAcpfMQnjo&amp;list=PLGgmaKOIHykFoomqkBJAyGiDQ2kyiuTao&amp;index=3">One-Way Syncs</a></li>
+</ul>
+<p>If you'd prefer not to watch videos, please read on.</p>
+<h2><a class="header" href="#creating-an-account" id="creating-an-account">Creating an Account</a></h2>
+<p>To sync with AnkiWeb, you’ll first need to create an account. If you
+have used AnkiWeb in the past, you can skip this step.</p>
+<ol>
+<li>
+<p>Visit <a href="https://ankiweb.net">https://ankiweb.net</a> and click the <strong>Sign Up</strong> button.</p>
+</li>
+<li>
+<p>Type in your email address and a password of your choice.</p>
+</li>
+</ol>
+<h2><a class="header" href="#computer-to-iphoneipad" id="computer-to-iphoneipad">Computer to iPhone/iPad</a></h2>
+<p>If you have decks on your computer and would like them to be synced to
+AnkiMobile:</p>
+<ol>
+<li>
+<p>Open the computer version and click the sync button at the top right
+of the Anki window.</p>
+</li>
+<li>
+<p>If prompted to upload or download, choose 'upload' to send your
+cards to AnkiWeb. Please make sure you <a href="https://faqs.ankiweb.net/media-files-may-take-time-to-sync.html">wait for media files to finish
+syncing</a>.</p>
+</li>
+<li>
+<p>Tap Synchronize in AnkiMobile and then 'download' to grab the cards
+from AnkiWeb. Please make sure you <a href="https://faqs.ankiweb.net/media-files-may-take-time-to-sync.html">wait for media files to finish
+syncing</a>.</p>
+</li>
+</ol>
+<h2><a class="header" href="#iphoneipad-to-computer" id="iphoneipad-to-computer">iPhone/iPad to Computer</a></h2>
+<p>If you have decks in your phone/iPad and would like them to be synced to
+the computer version:</p>
+<ol>
+<li>
+<p>Tap Synchronize in AnkiMobile and then 'upload' to send the cards to
+AnkiWeb.</p>
+</li>
+<li>
+<p>Open the computer version and click the sync button at the top right
+of the Anki window.</p>
+</li>
+<li>
+<p>If prompted to upload or download, choose 'download' to grab your
+cards from AnkiWeb.</p>
+</li>
+</ol>
+<h2><a class="header" href="#subsequent-syncs" id="subsequent-syncs">Subsequent Syncs</a></h2>
+<p>If you have a lot of sounds or images on your cards, the first sync may take
+some time, and until it completes, <a href="https://faqs.ankiweb.net/media-files-may-take-time-to-sync.html">sounds and images may fail to
+appear</a>.</p>
+<p>After the first synchronization has completed, you can click the
+synchronize button again any time you wish to synchronize your changes
+to the cloud. Only changes made since the previous sync will be sent, so
+subsequent syncs are a lot faster.</p>
+<p>If you add some new cards on the desktop computer and want to sync them
+to AnkiMobile, you’d repeat the same process: sync on desktop (or close
+the program, as it syncs automatically on close by default), and then
+tap the sync button on AnkiMobile.</p>
+<p>The sync button will change colour when a normal or full sync is required.</p>
+<h1><a class="header" href="#shared-decks" id="shared-decks">Shared Decks</a></h1>
+<h2><a class="header" href="#from-ankiweb" id="from-ankiweb">From AnkiWeb</a></h2>
+<p>To download a shared deck directly to your mobile device:</p>
+<ol>
+<li>
+<p>Ensure you’re connected to the internet.</p>
+</li>
+<li>
+<p>Tap <strong>Add/Export</strong> on the bottom left.</p>
+</li>
+<li>
+<p>Choose <strong>Shared Deck List</strong>. AnkiWeb will open.</p>
+</li>
+<li>
+<p>Select a category, or type in a search.</p>
+</li>
+<li>
+<p>Tap on a deck you’d like to study.</p>
+</li>
+<li>
+<p>Scroll down and tap <strong>Download</strong>.</p>
+</li>
+<li>
+<p>Safari will start downloading the file</p>
+</li>
+<li>
+<p>When it’s done, tap on the download icon in the top right, then <strong>Open in Anki</strong>.</p>
+</li>
+<li>
+<p>When the import completes, your deck should be ready to study.</p>
+</li>
+</ol>
+<h2><a class="header" href="#other-sources" id="other-sources">Other Sources</a></h2>
+<p>If you've downloaded a shared deck from another website, or received it in an email
+or messaging app:</p>
+<ol>
+<li>Tap on the file.</li>
+<li>Locate the &quot;Open In&quot; or &quot;Share&quot; icon, and select AnkiMobile from the available options.</li>
+</ol>
+<h1><a class="header" href="#the-deck-list" id="the-deck-list">The Deck List</a></h1>
+<p>The deck list is the screen you see when you start AnkiMobile. It
+displays a list of your card decks, and provides buttons for performing
+various actions.</p>
+<p>Next to each deck, two numbers are displayed. The top, green number
+corresponds to how many cards are due to be reviewed again today. On a
+deck you’ve never studied before, there won’t be any cards waiting for
+review. The second, blue number, corresponds to how many new cards you
+have to learn today. Anki will introduce 20 new cards a day by default,
+and you can customize this number in the deck options if you’d like.</p>
+<p>To study cards in a deck, simply tap on the deck, and AnkiMobile will
+switch to study mode.</p>
+<p>If you wish to rename or delete a deck, swipe your finger from right to
+left over it, and buttons will appear.</p>
+<p>At the top of the screen, you’ll see four buttons.</p>
+<ul>
+<li>
+<p>The question mark opens this help page</p>
+</li>
+<li>
+<p>The graph icon opens the deck statistics screen.</p>
+</li>
+<li>
+<p>The magnifying glass opens the card browser.</p>
+</li>
+<li>
+<p>The gear/cog opens the preferences screen.</p>
+</li>
+</ul>
+<p>On the bottom of the screen, there are two more buttons. <strong>Add/Export</strong>
+allows you to download shared decks, add/create an empty deck, and
+import/export .apkg files from iTunes. <strong>Synchronize</strong> synchronizes your
+cards with the cloud.</p>
+<p>The synchronize button will change color if you have made changes that
+need to be synchronized to AnkiWeb, or if changes are waiting on AnkiWeb
+that need to be synchronized to the device. One of the changes that Anki
+synchronizes to other clients is the current deck, so tapping on a deck
+will change the button color, even if you do not study any cards.</p>
+<h1><a class="header" href="#the-study-screen" id="the-study-screen">The Study Screen</a></h1>
+<p>If you have not used Anki on a computer before, please have a look at
+the first <a href="https://docs.ankiweb.net/#/getting-started?id=videos">intro
+video</a> before
+reading on, as it explains the basic review process.</p>
+<p>When you tap on a deck in the deck list, the study screen will load, and
+if any cards are waiting to be studied, a card’s question will be shown
+to you.</p>
+<p>If you wish to change to a different deck, you can do so by tapping the
+top left button. The next three buttons allow you to add cards, edit the
+current card, and search/browse all cards.</p>
+<p>The gear/cog in the bottom right will open up the <a href="study-screen.html#the-tools-screen">tools
+screen</a>.</p>
+<p>On the bottom of the screen you’ll see three numbers. From the left,
+these correspond to new cards, learning cards, and cards to review.
+These are explained in more detail in the intro videos for the desktop
+program, so please <a href="https://docs.ankiweb.net/#/getting-started?id=videos">check them
+out</a> if you
+haven’t already.</p>
+<p>When you’ve looked at a card’s question and remembered the answer, or
+decided you don’t know it, tap anywhere in the card area in order to
+show the answer. When you do, the bottom area will change to display 2-4
+answer buttons, depending on how you’ve answered the card previously.
+The buttons will display the time a card will next be shown, so 10m
+means &quot;10 minutes&quot; and &quot;5d&quot; means &quot;5 days&quot;. You can tap directly on
+these buttons to choose a particular answer.</p>
+<p>To make reviewing faster, you can also tap on the card in order to
+answer it. For more information on the available taps and how to
+customize them, please see the <a href="preferences.html#taps">taps</a> section.</p>
+<p>If you are studying content for which it is useful to sketch something
+before showing the answer on the card (e.g., characters in a foreign
+language), AnkiMobile provides a feature called the 'scratchpad' (the
+analogous feature is called the 'whiteboard' in AnkiDroid). You can
+enable the scratchpad by tapping on the tools button, then &quot;Scratchpad&quot;.</p>
+<p>When you’ve finished the cards that are due to be studied today, you’ll
+be shown a congratulations message. If you have other decks, you can tap
+the top left button to return to the decks list and select a different
+one.</p>
+<p>You can tap the home button to close Anki and save your progress at any
+time, whether you have completed the day’s reviews or not.</p>
+<p>If you have a bluetooth keyboard, you can use the keyboard to review.
+Space will show the answer or answer Good, and 1-4 will choose the
+answer buttons. You can also press 'r' to repeat the audio on the
+current card.</p>
+<h1><a class="header" href="#study-tools" id="study-tools">Study Tools</a></h1>
+<p>The tools screen will open when you tap on the gear/cog icon in the
+study screen.</p>
+<p>On the top right, there are buttons that will adjust the text size on
+your cards.</p>
+<p>The &quot;Frequent Actions&quot; section contains some commonly used actions. You
+can rearrange the actions there or remove actions by holding your finger
+on a button for a second or so.</p>
+<p>Below the &quot;Frequent Actions&quot; section is a list of all available actions
+in AnkiMobile. You can add these actions to the &quot;Frequent Actions&quot;
+section by long-pressing on them.</p>
+<h2><a class="header" href="#actions" id="actions">Actions</a></h2>
+<p>The following actions can be run from the tools screen, or by assigning
+them to a tap, swipe, or the top bar in the preferences.</p>
+<p><strong>Add</strong><br />
+Opens a new window to add cards to the deck.</p>
+<p><strong>Answer &quot;Again&quot;</strong><br />
+When the answer screen is shown, choose the red button, indicating you
+wish to review the card again soon. This is useful when you forgot a
+card or wish to review it more frequently.</p>
+<p><strong>Answer &quot;Hard&quot;</strong><br />
+When the answer screen is shown and there are four buttons, choose the
+second button from the left, indicating you found the card hard to
+remember.</p>
+<p><strong>Answer &quot;Good&quot;</strong><br />
+When the answer screen is shown, choose the green button. This is the
+button you should end up using the most.</p>
+<p><strong>Answer &quot;Easy&quot;</strong><br />
+When the answer screen is shown, choose the button on the right,
+indicating you found the card too easy to remember and would like a much
+longer delay.</p>
+<p><strong>Auto Advance</strong><br />
+Allows you to automatically reveal the answer, and automatically rate or
+bury cards. You can customize the behaviour in the preferences screen.</p>
+<p><strong>Bottom Bar</strong><br />
+Hides or shows the bottom bar, where the answer buttons and card counts
+are shown.</p>
+<p><strong>Browse</strong><br />
+Opens the card browser, where you can search for and modify cards.</p>
+<p><strong>Bury Card</strong><br />
+Hides the current card from review. It will be shown again the next day,
+or when you manually unbury cards.</p>
+<p><strong>Bury Note</strong><br />
+Hides the current note from review. It will be shown again the next day,
+or when you manually unbury cards.</p>
+<p><strong>Card Info</strong><br />
+Shows information about the current card.</p>
+<p><strong>Card Template</strong><br />
+Allows you to edit the card template, changing which fields are shown on
+the front and back of the card, and the card styling.</p>
+<p><strong>Current Audio +5s</strong><br />
+Jump forward 5 seconds in the currently playing audio.</p>
+<p><strong>Current Audio -5s</strong><br />
+Jump backward 5 seconds in the currently playing audio.</p>
+<p><strong>Custom Study</strong><br />
+Allows you to study outside of the normal schedule. Please see the
+documentation of the computer version for more information on custom
+study presets.</p>
+<p><strong>Deck Statistics</strong><br />
+Shows graphs and statistics about your deck or collection.</p>
+<p><strong>Decks</strong><br />
+Returns to the deck list.</p>
+<p><strong>Delete Note</strong><br />
+Deletes the currently shown note and all of its cards. If you’re not
+studying in multiple directions, this will just delete a single card.</p>
+<p><strong>Edit</strong><br />
+Edits the current card.</p>
+<p><strong>Empty</strong><br />
+Removes all cards from the current filtered deck.</p>
+<p><strong>Filter/Cram</strong><br />
+Allows you to create a temporary deck based on search criteria such as
+&quot;tag:hard&quot;. Please see the documentation of the computer version for
+more information on filtered decks.</p>
+<p><strong>Flag 1 - 4</strong><br />
+Sets or clears the card’s flag. Flagging cards allows you to find them
+easily in the browse screen later.</p>
+<p><strong>Mark</strong><br />
+Adds a tag called &quot;Marked&quot; to the current note, so it can be easily
+found in a search.</p>
+<p><strong>Mark &amp; Bury</strong><br />
+Marks the card, then buries it.</p>
+<p><strong>Mark &amp; Suspend</strong><br />
+Marks the card, then suspends it.</p>
+<p><strong>Night Mode</strong><br />
+Switch the interface between light and dark mode. On iOS 13, use the
+system dark mode setting instead.</p>
+<p><strong>Off</strong><br />
+Don’t do anything. Useful if you want to disable certain swipes, tap
+zones and so on. Not shown in the tools screen.</p>
+<p><strong>Pause Audio</strong><br />
+Temporarily stops or restarts the currently playing audio file.</p>
+<p><strong>Rebuild</strong><br />
+When in a filtered or custom study deck, rerun the search to fetch any
+cards that may newly match the criteria.</p>
+<p><strong>Record Voice</strong><br />
+Allows you to create a temporary recording of your voice, to compare it
+to audio that you have on your card.</p>
+<p><strong>Replay Audio</strong><br />
+Replay the card’s audio. You can customize whether the audio in the
+question is replayed while the answer is shown in the computer Anki.</p>
+<p><strong>Reset Card</strong><br />
+Turn the current card back into a new card.</p>
+<p><strong>Scratchpad</strong><br />
+Show or hide the writing pad, allowing you to practice writing
+characters during review. Anki will remember the on/off state for each
+card type. You can tap once on the undo button to undo a stroke, or hold
+on it for a second to clear all strokes. On devices that support
+pressure sensitivity (iPhone 6S, iPad w/ Apple Pencil), the stroke width
+will depend on how hard you press.</p>
+<p><strong>Scratchpad Size</strong><br />
+Alters the size of the scratchpad window.</p>
+<p><strong>Set Due Date</strong><br />
+Make the card a review card if it is not already one, and make it due in
+the number of days you specify. If you choose 0 days, the card will be
+ready to review immediately.</p>
+<p><strong>Show Answer</strong><br />
+Reveals the answer when a card’s question is shown.</p>
+<p><strong>Study Options</strong><br />
+Show the study options screen.</p>
+<p><strong>Suspend Card</strong><br />
+Prevent current card from being shown during review until you unsuspend
+it via the search action.</p>
+<p><strong>Suspend Note</strong><br />
+Prevent all cards of current note from being shown during review until
+you unsuspend them via the search action.</p>
+<p><strong>Top bar</strong><br />
+Show or hide the bar at the top of the screen.</p>
+<p><strong>Tools</strong><br />
+Show the tools screen.</p>
+<p><strong>Unbury Deck</strong><br />
+Makes any buried cards in the current deck ready for review again.</p>
+<p><strong>Undo</strong><br />
+Undoes the last review.</p>
+<h1><a class="header" href="#study-options" id="study-options">Study Options</a></h1>
+<p>The study options can be accessed from the <a href="study-tools.html#the-tools-screen">tools</a> screen.
+Almost all the options available in the computer version can also be
+adjusted in AnkiMobile. For a description of what everything does,
+please see the <a href="https://apps.ankiweb.net/docs/manual.html#deckoptions">computer
+documentation</a>.
+While some of the options have different wording, the behaviour is the
+same as the computer version.</p>
+<h1><a class="header" href="#adding--editing" id="adding--editing">Adding &amp; Editing</a></h1>
+<h2><a class="header" href="#adding" id="adding">Adding</a></h2>
+<p>To add cards to a deck, tap the &quot;Add&quot; button while reviewing.</p>
+<p>The &quot;Type&quot; button at the top allows you to select the type of note you’d
+like to add. For more information about note types, please see the
+introduction in the <a href="https://apps.ankiweb.net/docs/manual.html#basics">computer version’s
+manual</a>.</p>
+<p>When you tap on a field, a keyboard will come up, allowing you to type
+in information. You can use the next and previous buttons to move
+between fields.</p>
+<p>The toolbar has the following icons:</p>
+<p><strong>B I U</strong><br />
+Mark the text as bold, italics or underline.</p>
+<p><strong>Fx</strong><br />
+Remove formatting.</p>
+<p><strong>Paintbrush</strong><br />
+Only available in iOS 13+. Sets the text color.</p>
+<p><strong>Paperclip/Camera</strong><br />
+Allows you to add media files from the camera, microphone, photo library
+or from a file. On iPads, the mic button is shown separately.</p>
+<p><strong>Pen</strong><br />
+Only available on iPads on iOS 13+. Allows you to draw an image and
+attach it to the card. You can later edit a drawn image by holding two
+fingers on it.</p>
+<p><strong>Square root</strong><br />
+Only available in iOS 13+. Shortcuts to subscript/superscript, and
+<a href="mathjax.html">MathJax</a>.</p>
+<p><strong>Eye</strong><br />
+Shows a preview of how the card will appear when reviewed.</p>
+<p><strong>&lt;/&gt;</strong><br />
+Reveals the underlying HTML that fields are comprised of.</p>
+<p>When you’ve typed in the content of a note, hit the save button to add
+it to your collection.</p>
+<h2><a class="header" href="#editing" id="editing">Editing</a></h2>
+<p>To edit a note, tap the &quot;Edit&quot; button while reviewing.</p>
+<p>The edit screen is similar to the adding screen mentioned above, with
+some key differences:</p>
+<ul>
+<li>
+<p>There is no note type selection button or deck selection button. If
+you want to change the type of an existing note, you currently need
+to do so with the computer version of Anki.</p>
+</li>
+<li>
+<p>There is a &quot;Tools&quot; button at the top of the screen. Tapping on it
+will allow you to perform actions on the current card or note.
+Please see the <a href="study-tools.html#actions">action descriptions</a> for more information
+on what each action does.</p>
+</li>
+</ul>
+<h2><a class="header" href="#browsing" id="browsing">Browsing</a></h2>
+<p>You can search or browse your deck by tapping the &quot;Browse&quot; button while
+reviewing.</p>
+<p>The browse screen will show all the cards in the current deck by
+default.</p>
+<p>You can type text into the search box in order to limit the cards
+further. If you only wanted to show cards in the current deck that
+contain the text &quot;hello&quot; for example, you’d modify the text so it says
+<code>deck:current hello</code> and then tap return. If you wish to search across
+multiple decks, you can remove the <code>deck:current</code> part.</p>
+<p>AnkiMobile supports all the search strings that the desktop version of
+Anki does, allowing you to perform quite complex searches. Some
+examples:</p>
+<p><code>tag:marked</code> show cards that with the tag &quot;marked&quot;</p>
+<p><code>is:due</code> show only cards that are waiting for review</p>
+<p><code>front:rabbit</code> show only cards where the front field is exactly &quot;rabbit&quot;</p>
+<p>For a full list of the possibilities, please see the section in the
+<a href="https://apps.ankiweb.net/docs/manual.html#searching">desktop manual</a>.</p>
+<p>Tapping the Filter button will reveal a list of filters you can apply,
+like the side bar in the computer version. Tapping on a line will
+replace the current search; you can also swipe on a line to add to the
+existing search instead.</p>
+<p>The Options button will allow you to change what is shown in the left
+and right columns, and change the order cards are shown in.</p>
+<p>The Select button allows you to select multiple cards at once, and then
+perform actions on them like changing their deck, or suspending them.</p>
+<h1><a class="header" href="#preferences" id="preferences">Preferences</a></h1>
+<p>The preferences screen can be accessed by tapping on the gear icon at
+the top right of the deck list. It allows you to customize various
+application settings and how AnkiMobile appears.</p>
+<p>The Preferences screen is divided up into different sections, which are
+covered below.</p>
+<h2><a class="header" href="#syncing" id="syncing">Syncing</a></h2>
+<p>The syncing screen allows you to customize <a href="syncing.html">cloud synchronization</a> with
+AnkiWeb.</p>
+<p><strong>Sync Sounds &amp; Images</strong><br />
+By default, AnkiMobile will sync sounds and images as well as your cards
+and review history. If you disable this option, sounds and images will
+not be synced by AnkiMobile.</p>
+<p><strong>Full Sync</strong><br />
+The full sync button allows you to force a full upload or download of
+your cards. This is useful if you accidentally deleted some cards and
+want to revert to the local or remote version, instead of having those
+deletions propagate to other devices. After tapping the button, you’ll
+be given a choice of whether you want to upload your collection or
+download it from AnkiWeb. Please note this option only affects how
+cards, notes and review history is transferred - it does not change how
+sounds and images are synced.</p>
+<h2><a class="header" href="#review" id="review">Review</a></h2>
+<p>The review screen allows you to customize how AnkiMobile behaves when
+you’re reviewing cards.</p>
+<p><strong>Feedback Ticks</strong><br />
+Flash a tick or cross in the top right to confirm your answer choice.</p>
+<p><strong>Tools Overlay Button</strong><br />
+Show the gear/cog icon on the study screen. If you prefer not to see it,
+you can assign the tools action to the top bar instead.</p>
+<p><strong>Tools Overlay Position</strong><br />
+Allows you to put the tools button on the left.</p>
+<p><strong>Audio Buttons</strong><br />
+Allows you to hide the play button that appears for each audio file
+you’ve placed on the card. Useful if you’d rather replay audio via the
+&quot;Replay Audio&quot; action bound to a swipe or tap.</p>
+<p><strong>Always Duck + Ignore Mute</strong><br />
+When enabled, AnkiMobile will quieten any music you have playing in the
+background, and will automatically play audio even when the
+mute/vibrate/silent switch is turned on.</p>
+<p><strong>Answer Keeps Zoom</strong><br />
+By default, if you have zoomed in on a card, the screen will zoom out
+when you reveal the answer. If you enable this option, AnkiMobile will
+not zoom out.</p>
+<p><strong>Never Type Answer</strong><br />
+If you have set up your cards to ask you to type in the answer (as
+explained in <a href="https://apps.ankiweb.net/docs/manual.html#templates">this
+section</a> of the
+desktop manual), AnkiMobile will display a keyboard on such cards and
+allow you to check your answer. If you find typing on a mobile device
+inconvenient, you can use this option to disable the keyboard for all
+cards.</p>
+<p><strong>Shake Action</strong><br />
+Allows you to customize what happens when you shake your device. The
+default action is to undo the previous answer.</p>
+<p><strong>Double Tap Prevention</strong><br />
+This option ignores a second tap when two taps are made in quick
+succession, so that you don’t accidentally reveal the answer or advance
+to the next card. If you review your cards very quickly, you may wish to
+select a shorter detection time.</p>
+<h3><a class="header" href="#scheduling" id="scheduling">Scheduling</a></h3>
+<p>These options affect the way Anki schedules cards in all decks.</p>
+<p><strong>New/Review Order</strong><br />
+Whether Anki should introduce new cards before, after, or together with
+review cards.</p>
+<p><strong>Day Starts</strong><br />
+Controls when a new day starts and new cards become available. Default
+is 04:00, which means new cards become available at 4AM.</p>
+<p><strong>Learn Ahead Minutes</strong><br />
+The number of minutes to look ahead when the only cards remaining to
+review with a next repetition time in the future. The default is 20
+minutes, which means cards due to show in 10 minutes will be shown
+immediately if nothing else is available to show.</p>
+<h3><a class="header" href="#notifications" id="notifications">Notifications</a></h3>
+<p>When enabled, Anki will display an alert at the selected time of day,
+reminding you to study and telling you how many reviews are waiting.</p>
+<h3><a class="header" href="#top-bar" id="top-bar">Top Bar</a></h3>
+<p>You can assign frequently used actions to the top bar for convenient
+access. For an explanation of the available actions, please see the
+<a href="study-tools.html#actions">actions list</a>.</p>
+<h3><a class="header" href="#bottom-bar" id="bottom-bar">Bottom Bar</a></h3>
+<p><strong>Show Bottom Bar</strong><br />
+Hides or shows the bottom area that shows the answer buttons and card
+counts.</p>
+<p><strong>Remaining Count</strong><br />
+Whether to show the card counts when the question side of a card is
+being shown.</p>
+<p><strong>Answer Buttons</strong><br />
+Whether to show the answer buttons on the answer side of a card.</p>
+<p><strong>Next Times</strong><br />
+Whether to show the next study time above each of the answer buttons.</p>
+<h3><a class="header" href="#taps" id="taps">Taps</a></h3>
+<p>When you’re reviewing, you can tap on different parts of a card in order
+to trigger different actions.</p>
+<p>Anki divides the screen into 9 sections:</p>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><p>Top Left</p></td>
+<td><p>Top Center</p></td>
+<td><p>Top Right</p></td>
+</tr>
+<tr class="even">
+<td><p>Mid Left</p></td>
+<td><p>Mid Center</p></td>
+<td><p>Mid Right</p></td>
+</tr>
+<tr class="odd">
+<td><p>Bottom Left</p></td>
+<td><p>Bottom Center</p></td>
+<td><p>Bottom Right</p></td>
+</tr>
+</tbody>
+</table>
+<p>Each section can have a different action assigned to it if you wish, and
+the taps when the question is shown are also different from the taps
+when the answer is shown.</p>
+<p>By default, AnkiMobile responds as follows when the question in shown:</p>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><p>Show Answer</p></td>
+<td><p>Show Answer</p></td>
+<td><p>Show Answer</p></td>
+</tr>
+<tr class="even">
+<td><p>Show Answer</p></td>
+<td><p>Show Answer</p></td>
+<td><p>Show Answer</p></td>
+</tr>
+<tr class="odd">
+<td><p>Show Answer</p></td>
+<td><p>Show Answer</p></td>
+<td><p>Show Answer</p></td>
+</tr>
+</tbody>
+</table>
+<p>In other words, tapping anywhere on the screen will show the answer.</p>
+<p>When the answer is shown, by default AnkiMobile responds as follows:</p>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><p>Answer "Again"</p></td>
+<td><p>Off</p></td>
+<td><p>Answer "Good"</p></td>
+</tr>
+<tr class="even">
+<td><p>Answer "Again"</p></td>
+<td><p>Off</p></td>
+<td><p>Answer "Good"</p></td>
+</tr>
+<tr class="odd">
+<td><p>Answer "Again"</p></td>
+<td><p>Off</p></td>
+<td><p>Answer "Good"</p></td>
+</tr>
+</tbody>
+</table>
+<p>This allows you to tap on the left side of the screen to trigger the red
+button, and the right side of the screen to trigger the green button.
+Taps near the middle of the screen will be ignored.</p>
+<p>You can assign frequently used actions to taps for convenient access.
+For an explanation of the available actions, please see the <a href="study-tools.html#actions">actions
+list</a>.</p>
+<h3><a class="header" href="#swipes" id="swipes">Swipes</a></h3>
+<p>You can also swipe up, down, left or right across a card to trigger an
+action.</p>
+<p>To ensure swipes don’t interfere with your ability to scroll on a large
+card or select text, a swipe must begin from the far left or right side
+of the screen. Begin by placing your finger on the left or right side of
+the screen, and then move it up, down, left or right to trigger the
+relevant swipe.</p>
+<p>With the default settings:</p>
+<ul>
+<li>
+<p>Swiping left displays the tools window</p>
+</li>
+<li>
+<p>Swiping right returns to the deck list</p>
+</li>
+</ul>
+<p>You can assign frequently used actions to swipes for convenient access.
+For an explanation of the available actions, please see the <a href="study-tools.html#actions">actions
+list</a>.</p>
+<h3><a class="header" href="#scratchpad" id="scratchpad">Scratchpad</a></h3>
+<p><strong>Ignore Fingers</strong><br />
+When enabled, the scratchpad will only respond to the Apple Pencil.</p>
+<p><strong>Undo Clears All</strong><br />
+Reverses the behaviour of the undo button, so a quick tap clears
+everything, and a long press clears the last stroke.</p>
+<p><strong>Scratchpad Below Buttons</strong><br />
+Whether the scratchpad should be placed above or below the bottom bar.</p>
+<h3><a class="header" href="#auto-advance" id="auto-advance">Auto Advance</a></h3>
+<p><strong>Wait for Audio</strong><br />
+Don’t advance until the current audio stops playing.</p>
+<p><strong>Answer Action</strong><br />
+Whether to bury the card, answer it, show a popup reminder, or do
+nothing.</p>
+<h3><a class="header" href="#gamepads" id="gamepads">Gamepads</a></h3>
+<p>From AnkiMobile 2.0.53+, you can control the study screen with a game
+controller on iOS 13+. The controller must be supported by iOS, and
+already paired with your iOS device. Please see the following page for
+supported controllers, and how to set them up:</p>
+<p><a href="https://support.apple.com/en-au/HT210414">https://support.apple.com/en-au/HT210414</a></p>
+<p>The gamepads section of the preferences allows you to configure which
+actions are triggered when each button is pressed. You can assign an
+action to each direction on the d-pad, but the analog thumbpads can not
+be customized - they will always scroll the card up or down.</p>
+<h2><a class="header" href="#general" id="general">General</a></h2>
+<p><strong>Legacy Editor</strong><br />
+When enabled, Anki uses an older editor that has fewer features. It is
+provided for users stuck on iOS 12 or earlier, who use right-to-left
+languages. If you are on iOS 13 or don’t use a right-to-left language,
+the regular editor is a better choice.</p>
+<h2><a class="header" href="#theme" id="theme">Theme</a></h2>
+<p>The theme screen allows you to customize the bar colours AnkiMobile
+uses. The available options will depend on whether night mode or iOS
+13’s dark mode is enabled.</p>
+<p>To customize the appearance of your cards, you’ll need to alter your
+card templates. You can do this using the Card Template action in the
+tools screen, or by using the computer version. For more info, please
+see <a href="http://www.youtube.com/watch?v=F1j1Zx0mXME&amp;yt:cc=on">http://www.youtube.com/watch?v=F1j1Zx0mXME&amp;yt:cc=on</a></p>
+<h2><a class="header" href="#profiles" id="profiles">Profiles</a></h2>
+<p>Profiles allow multiple users to study with the same device. You can add
+profiles from the settings screen. To rename or remove a profile, swipe
+to the left on it.</p>
+<p>Each profile needs to be synced with its own AnkiWeb account. Please be
+careful not to sync two profiles with the same AnkiWeb ID, as this could
+lead to data loss.</p>
+<h2><a class="header" href="#backups" id="backups">Backups</a></h2>
+<p>AnkiMobile will automatically create backups of your collection for you.
+The backups include all your cards and statistics, but do not include
+sounds or images, since they take up a lot of space.</p>
+<p>The backup is taken in the background when you return to your device’s
+home screen, or switch to another app. A backup will only happen if more
+than an hour has elapsed since the last time a backup was created.
+AnkiMobile will store the last 15 backups.</p>
+<p>To restore from a backup, open the Backups section in the preferences,
+and tap on the backup you wish to restore to.</p>
+<p>It is also possible to customize the frequency and amount of backups
+that are created, via the settings at the top of the backups section.
+You can change 15 to a different number to adjust the number of backups</p>
+<ul>
+<li>set it to zero to disable backups completely.</li>
+</ul>
+<p>If you’re unable to get AnkiMobile to start due to a serious error, you
+can still retrieve the backups from the iTunes file sharing area:</p>
+<ol>
+<li>
+<p>Connect your Apple device to your computer via the USB cable.</p>
+</li>
+<li>
+<p>Open iTunes if it doesn’t open automatically.</p>
+</li>
+<li>
+<p>Locate Anki’s file sharing section with <a href="http://support.apple.com/kb/HT4094">Apple’s
+instructions</a>.</p>
+</li>
+<li>
+<p>Drag the your backup files from iTunes to your desktop.</p>
+</li>
+<li>
+<p>With the computer version of Anki, create a new, empty profile via
+File&gt;Switch Profile, and then File&gt;Import the latest backup
+apkg from within that profile to confirm that it’s ok. If it is
+corrupt, you can try a previous backup.</p>
+</li>
+</ol>
+<h2><a class="header" href="#check-database" id="check-database">Check Database</a></h2>
+<p>This will check your collection for a number of possible errors and fix
+them if possible.</p>
+<p>It also will remove any tags that are no longer used by any cards.</p>
+<h2><a class="header" href="#check-media" id="check-media">Check Media</a></h2>
+<p>This scans all your notes for references to sounds and images, and then
+checks to make sure that the sounds and images are available. It will
+display a report letting you know of any sounds or images that are
+missing, and any sounds or images that are not used by any cards. If you
+tap the delete button, the unused sounds or images will be deleted.</p>
+<h1><a class="header" href="#collection-transfer" id="collection-transfer">Collection Transfer</a></h1>
+<p>If you don’t have regular internet access, it’s still possible to copy
+your collection back and forth between devices, though the process is
+not as convenient.</p>
+<p>Collection transfer works by importing or exporting <strong>all your
+decks at once</strong>, in a special file called <code>collection.colpkg</code>.
+You can export that file on one device, copy it to another device, and
+import it there.</p>
+<p>When you import a collection file, any existing content you have is
+replaced with the contents of the file - it is a one-way transfer
+from your other device.</p>
+<p>This means that unlike syncing via AnkiWeb, you can’t make changes from
+two locations at once and then merge them - you need to make sure you’ve
+imported any recent changes from your other device before you make
+changes, or you’ll end up losing the changes made on one device.</p>
+<p>A workflow you would typically use is to export your collection
+from your mobile device and import it into the computer version, make
+modifications (such as importing a shared deck you downloaded to your
+computer), and then export your collection and import it back into your
+mobile device.</p>
+<p>Importing individual decks is not currently possible, but is planned
+for the future.</p>
+<h2><a class="header" href="#computer-to-iphoneipad-1" id="computer-to-iphoneipad-1">Computer to iPhone/iPad</a></h2>
+<h3><a class="header" href="#export-the-file" id="export-the-file">Export the File</a></h3>
+<p>On your computer:</p>
+<ol>
+<li>
+<p>Open the computer version of Anki.</p>
+</li>
+<li>
+<p>Choose <strong>File&gt;Export</strong> from the menu.</p>
+</li>
+<li>
+<p>Click the <strong>Export​</strong> button. Make sure to leave &quot;All decks&quot;
+and &quot;Include scheduling information&quot; turned on.</p>
+</li>
+<li>
+<p>Anki will automatically create a <code>collection.colpkg</code> file on
+your desktop. If the file is named something else like
+<code>deckname.apkg</code>, please see the previous step again. If it
+is called <code>collection.apkg</code>, that will work - your Anki version
+is just old.</p>
+</li>
+</ol>
+<h3><a class="header" href="#transfer-the-file" id="transfer-the-file">Transfer the File</a></h3>
+<p>If your devices are on the same wifi network and signed in to iCloud, you can
+use the AirDrop option in Finder to
+<a href="https://support.apple.com/en-au/HT204144">AirDrop</a> the <code>collection.colpkg</code> file
+to your mobile device.</p>
+<p>If you do not have access to AirDrop, you can use
+<a href="https://support.apple.com/en-us/HT210598">Finder</a> or
+<a href="http://support.apple.com/kb/HT4094">iTunes</a> to drop the .colpkg file into
+Anki's file sharing area.</p>
+<h3><a class="header" href="#import-the-file" id="import-the-file">Import the File</a></h3>
+<p>If you AirDropped the file, AnkiMobile should have automatically
+popped up and imported the file when you accepted it.</p>
+<p>If you transferred the file via iOS file sharing, go to AnkiMobile's
+deck list screen, and then:</p>
+<ol>
+<li>
+<p>Tap the <strong>Add/Export</strong> button on the bottom left.</p>
+</li>
+<li>
+<p>Choose <strong>Import from iTunes</strong>, then confirm the replacement.</p>
+</li>
+<li>
+<p>If you receive a message about &quot;No file found to import&quot;, please
+check to make sure you put the <code>collection.colpkg</code> file in AnkiMobile's
+file sharing section.</p>
+</li>
+</ol>
+<p>Once complete, the decks on your device will have been replaced with the
+decks from your desktop.</p>
+<p>When you import a <code>collection.colpkg</code> file, Anki will avoid
+copying any sounds or images if they already exist on your mobile
+device, and are the same file size. This will make imports after the
+first one considerably faster if you have a lot of media files.</p>
+<h2><a class="header" href="#iphoneipad-to-computer-1" id="iphoneipad-to-computer-1">iPhone/iPad to Computer</a></h2>
+<p>On AnkiMobile, tap the <strong>Add/Export</strong> button on the bottom left of
+the decks list.</p>
+<h3><a class="header" href="#airdrop" id="airdrop">AirDrop</a></h3>
+<ol>
+<li>Choose <strong>Export to Share</strong>, and then choose <strong>AirDrop</strong>.</li>
+<li>Select your computer. If your computer doesn't appear, make
+sure you have AirDrop open on your computer.</li>
+<li>Once the file has arrived on your computer, use <strong>File&gt;Import</strong>
+inside Anki to import the file.</li>
+</ol>
+<h3><a class="header" href="#finderitunes" id="finderitunes">Finder/iTunes</a></h3>
+<ol>
+<li>Choose <strong>Export to iTunes</strong>, and tap <strong>Export</strong>.</li>
+</ol>
+<p>Then on your computer:</p>
+<ol>
+<li>
+<p>Connect your Apple device to your computer via the USB cable.</p>
+</li>
+<li>
+<p>Open Finder or iTunes.</p>
+</li>
+<li>
+<p>Locate Anki’s file sharing section with <a href="http://support.apple.com/kb/HT4094">Apple’s
+instructions</a>.</p>
+</li>
+<li>
+<p>Drag the <code>collection.colpkg</code> file from Finder or iTunes to your
+desktop.</p>
+</li>
+<li>
+<p>Use File&gt;Import in Anki to import the file.</p>
+</li>
+<li>
+<p>After importing, you can delete the file on your desktop if you
+wish.</p>
+</li>
+</ol>
+<h1><a class="header" href="#text-to-speech" id="text-to-speech">Text to Speech</a></h1>
+<p>AnkiMobile 2.0.56+ supports using TTS tags in card templates. Please see
+<a href="https://docs.ankiweb.net/#/templates/fields?id=text-to-speech">the computer
+manual</a> for
+more information.</p>
+<p>To get the best quality sound, please go to the iOS Settings app, then:</p>
+<ul>
+<li>
+<p>Tap on Accessibility</p>
+</li>
+<li>
+<p>Tap on VoiceOver</p>
+</li>
+<li>
+<p>Tap on Speech</p>
+</li>
+<li>
+<p>Tap on Voice</p>
+</li>
+<li>
+<p>Tap on the voice you want to use</p>
+</li>
+<li>
+<p>If there is an (Enhanced) version available, download it.</p>
+</li>
+</ul>
+<p>Please note that Apple limit Siri to their own apps, so you will need to
+pick a voice other than Siri.</p>
+<p>The Voice section will only show options for your current language. To
+add voices for other languages, tap on &quot;Rotor Languages&quot;, and after
+selecting another language, you will have a chance to download voices.</p>
+<p>Like regular audio, text to speech will not play automatically when your
+device’s mute/vibrate switch is enabled.</p>
+<h1><a class="header" href="#mathjax" id="mathjax">MathJax</a></h1>
+<p>MathJax allows you to easily add mathematical equations to your cards.</p>
+<p>AnkiMobile supports MathJax out of the box. Simply place something like
+the following on your card:</p>
+<pre><code>This is some text \(x^2\) with an inline equation.
+
+An equation block:
+
+\[\sqrt{-1}\]
+</code></pre>
+<p>More information is available in the <a href="https://docs.ankiweb.net/#/math">computer manual</a>.</p>
+<h1><a class="header" href="#custom-fonts" id="custom-fonts">Custom Fonts</a></h1>
+<p>AnkiMobile allows you to use non-system fonts on your cards. To set them
+up, the desktop client is required. Please see <a href="https://docs.ankiweb.net/#/templates/styling?id=installing-fonts">the section in the
+desktop
+manual</a> for
+more information.</p>
+<p>Please note that AnkiMobile has to load the entire font into memory in
+order to use it, and fonts for Asian languages can be quite large. If
+you have an older device and notice AnkiMobile crashing frequently after
+installing a font, you may have exceeded your device’s memory limits.</p>
+<p>We have had reports from one user that no more than 3 fonts could be
+embedded - this may be a limitation imposed by the system web libraries.
+If you need access to lots of fonts, you may want to look at installing
+the fonts into iOS instead.</p>
+<h1><a class="header" href="#night-mode-styling" id="night-mode-styling">Night Mode Styling</a></h1>
+<p>By using the Edit Card Template action, it is possible to customize how
+cards appear when night mode/dark mode is enabled.</p>
+<p>If you wanted a grey background instead of black, you could use
+something like:</p>
+<pre><code class="language-css">.card.nightMode {
+  background-color: #555;
+}
+</code></pre>
+<p>If you have a 'myclass' style, the following would show the text in
+yellow when night mode is enabled:</p>
+<pre><code class="language-css">.nightMode .myclass {
+  color: yellow;
+}
+</code></pre>
+<h1><a class="header" href="#url-schemes" id="url-schemes">URL Schemes</a></h1>
+<p>AnkiMobile supports URL schemes for opening third party dictionaries,
+and for adding content to AnkiMobile from other applications.</p>
+<h2><a class="header" href="#ankimobiles-url-scheme" id="ankimobiles-url-scheme">AnkiMobile’s URL Scheme</a></h2>
+<p>A 'URL Scheme' is like a link to a website, but it instead links to an
+app. A simple example is:</p>
+<pre><code>anki://
+</code></pre>
+<p>If you type this into Safari on your device, you’ll see AnkiMobile open
+up.</p>
+<p>From 2.0.30 onwards, AnkiMobile provides a scheme for adding new notes
+to your collection. This can be used with dictionary apps that support
+calling other apps via URL schemes, and with automation apps like
+Workflow.</p>
+<p>The scheme to add cards looks like this:</p>
+<pre><code>anki://x-callback-url/addnote?profile=User 1&amp;type=Basic&amp;deck=Default&amp;fldFront=front text&amp;fldBack=back text
+</code></pre>
+<p>The first part must always be there:</p>
+<p>anki://x-callback-url/addnote?</p>
+<p>After the first part, keys and values are separated by an ampersand. The
+following keys must always be provided:</p>
+<ul>
+<li>
+<p>profile=&lt;profile name&gt;</p>
+</li>
+<li>
+<p>type=&lt;note type name&gt;</p>
+</li>
+<li>
+<p>deck=&lt;deck name&gt;</p>
+</li>
+</ul>
+<p>Fields are entered by prefixing their name with &quot;fld&quot;. So if your first
+field is called &quot;Text&quot;, the key would be &quot;fldText&quot;. The field text is
+interpreted as HTML, so if you wanted a newline in the text you’d use
+something like &quot;line 1&lt;br&gt;line 2&quot;.</p>
+<p>Special characters in the URL must be escaped. For example, if you have
+spaces in a field, they must be represented with <code>%20</code>. If you’re using
+the Shortcuts app, there is a URL encode action which you may find
+useful.</p>
+<p>The remaining keys are optional:</p>
+<ul>
+<li>
+<p>tags=&lt;tags separated by space&gt;</p>
+</li>
+<li>
+<p>dupes=1 - if provided, allow a note to be added even if the same
+content is on an existing note.</p>
+</li>
+<li>
+<p>x-success=&lt;url scheme for another app&gt; - use to automatically
+return to another app after the note is added.</p>
+</li>
+</ul>
+<p>If a field you provide is a link to an image or audio file, AnkiMobile
+will automatically download that media and place a link to it in the
+field. Eg:</p>
+<pre><code>fldFront=http://example.com/image.jpg
+</code></pre>
+<p>The link will only be downloaded if it ends with a recognized file
+extension. If your link is to a dynamic webpage, you can add a fake
+argument with the extension at the end, eg
+<code>http://example.com/getImage?imgID=1234&amp;fakePath=foo.jpg</code>. Be careful to
+escape the URL before including it in the URL scheme, as otherwise ? and
+&amp; characters will be interpreted as part of the URL scheme instead of
+the URL.</p>
+<h2><a class="header" href="#dictionary-links" id="dictionary-links">Dictionary Links</a></h2>
+<p>The desktop version of Anki provides the ability to open a web page
+based on the contents of a field, for easily creating a link to an
+online dictionary site. This is documented <a href="https://apps.ankiweb.net/docs/manual.html#_dictionary_links">in this
+section</a> of
+the manual, though please start from the <a href="https://apps.ankiweb.net/docs/manual.html#templates">cards &amp;
+templates</a> section
+as the above link assumes you have read it.</p>
+<p>Like the desktop, AnkiMobile supports links to dictionary websites. In
+addition to that, you can also link to different dictionary apps that
+you have installed on your device using a URL scheme.</p>
+<p>Some dictionary apps provide a URL scheme that allows you to provide a
+particular phrase to search for. For example, an app called iDict+
+allows the following type of URL:</p>
+<pre><code>idictplus://?search=mysearchtext
+</code></pre>
+<p>If you have iDict+ installed and type that into Safari, iDict+ should
+open up and immediately search for &quot;mysearchtext&quot;.</p>
+<p>iDict+ also supports passing a return link. We can replace the above
+with:</p>
+<pre><code>idictplus://?search=txt&amp;scheme=anki://
+</code></pre>
+<p>If you type that into Safari, it will search for &quot;mysearchtext&quot; like
+before, but will also provide a &quot;return&quot; button that when pressed will
+open up Anki.</p>
+<p>By taking that text and combining it with the instructions for the
+desktop version linked above, it’s possible to have a link on your cards
+that searches for a word in another app, and then allows you to return
+to Anki when you’re done.</p>
+<p>Unfortunately, there is no standard for URL schemes: some apps implement
+them, some don’t, and the way they implement them can different. For
+example, in the app called &quot;Kotoba!&quot;, the URL scheme is:</p>
+<pre><code>kotoba://dictionary?word=mysearchtext
+</code></pre>
+<p>Note how not only the app name differs but also the text after it, and
+how Kotoba! doesn’t provide the ability to automatically return to the
+app that opened it, meaning that you need to double tap the home button
+and manually return to AnkiMobile.</p>
+<p>Some dictionary apps publish their URL scheme in their documentation. If
+you’re using a dictionary app that doesn’t, please contact the authors
+and ask them for more information.</p>
+<h1><a class="header" href="#installing-ankimobile-on-multiple-devices" id="installing-ankimobile-on-multiple-devices">Installing AnkiMobile on multiple devices</a></h1>
+<p>Once purchased, you can use AnkiMobile on multiple devices you own without having to pay again.</p>
+<p>To do so, make sure the device is using the same Apple ID as you made the original purchase with, or is enrolled in <a href="https://support.apple.com/en-au/HT201060">family sharing</a>.</p>
+<ul>
+<li>Open the App Store on the device you want to install AnkiMobile on.</li>
+<li>(on iOS 12 or below, tap on the Updates tab)</li>
+<li>Tap on your profile icon in the top right</li>
+<li>Tap on Purchased</li>
+<li>If you have family sharing enabled, tap on the person who bought the app originally.</li>
+<li>When you've located AnkiMobile, tap on the cloud icon to download it.</li>
+</ul>
+<p>If you're on an older version of iOS, or the purchase is not appearing, you can attempt to purchase the app again. Provided you make the purchase with the same Apple ID as the original purchase or family sharing is correctly set up, after you attempt to purchase the app, you should receive a message saying the download is free.</p>
+<h2><a class="header" href="#account-troubles" id="account-troubles">Account troubles</a></h2>
+<p>Apple do not provide us with any access to their systems, so we do not have the ability to help you recover an old account, or confirm a previous purchase you have made. If you have any trouble with the purchase or download process, please give Apple a call:</p>
+<p><a href="http://support.apple.com">http://support.apple.com</a></p>
+<h1><a class="header" href="#ankimobile-beta-testing" id="ankimobile-beta-testing">AnkiMobile beta testing</a></h1>
+<p>Any existing AnkiMobile user that syncs with AnkiWeb is welcome to become a beta tester - please just post a <a href="https://anki.tenderapp.com/discussions/private">private ticket</a> requesting an invite. If you sync AnkiMobile with a different AnkiWeb ID, please include your AnkiWeb ID in the message as well.</p>
+<p>Switching between beta versions and stable versions will preserve any cards you have on your device. But just to be safe, please sync any changes you've made to AnkiWeb before switching versions.</p>
+<p>Once you've received an invite, please accept it and install the TestFlight app from the app store. Using the TestFlight app, you can download the latest beta. As new beta versions are released, you will receive a notification, and can upgrade as you please.</p>
+<p>If you would like to revert to the store version, you can go to AnkiMobile's app store page and tap on the cloud icon. Once you switch back to the store version, you will receive normal app updates as you did before.</p>
+<p>If you no longer wish to beta test and do not want to receive further notifications, you can remove yourself using the TestFlight app.</p>
+<p>If you experience any issues with the betas, please either post a <a href="https://anki.tenderapp.com/discussions/private">private ticket</a>, or post on the <a href="https://forums.ankiweb.net/c/beta-testing/13">Beta Testing section</a> of the forums.</p>
+<h1><a class="header" href="#more-features" id="more-features">More Features</a></h1>
+<h2><a class="header" href="#javascript" id="javascript">Javascript</a></h2>
+<p>The <a href="https://apps.ankiweb.net/docs/manual.html#javascript">warnings</a>
+that apply to the computer version also apply to AnkiMobile.</p>
+<p>In addition to the above, another thing to be aware of in AnkiMobile is
+that your code also needs to play nicely with AnkiMobile’s tap
+detection. Taps on A/BUTTON elements, or elements that have an onclick
+handler should work as you expect.</p>
+<p>If you have other elements that must receive tap events, give them the
+class 'tappable' to tell AnkiMobile 2.0.39 or later that it should pass
+taps through to the element.</p>
+<h2><a class="header" href="#play-buttons" id="play-buttons">Play Buttons</a></h2>
+<p>To change the styling of the audio replay buttons, please see
+<a href="https://apps.ankiweb.net/docs/manual.html#audio-replay-buttons">https://apps.ankiweb.net/docs/manual.html#audio-replay-buttons</a></p>
+<h2><a class="header" href="#image-resizing" id="image-resizing">Image Resizing</a></h2>
+<p>When you attach an image from the photo gallery it is automatically
+resized to have a maximum length of 1024 along its longest edge.</p>
+<p>Recent Anki versions allow you to customize this limit in the <strong>Preferences &gt;
+General</strong> screen.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+
+        
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        
+
+        
+
+        
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+        
+        <script type="text/javascript">
+        window.addEventListener('load', function() {
+            window.setTimeout(window.print, 100);
+        });
+        </script>
+        
+        
+
+    </body>
+</html>

@@ -1,0 +1,345 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>URL Schemes - AnkiMobile Manual</title>
+        
+        
+
+
+        <!-- Custom HTML head -->
+        
+
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        
+        <link rel="icon" href="favicon.svg">
+        
+        
+        <link rel="shortcut icon" href="favicon.png">
+        
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        
+        <link rel="stylesheet" href="css/print.css" media="print">
+        
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        
+        <link rel="stylesheet" href="fonts/fonts.css">
+        
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="intro.html"><strong aria-hidden="true">1.</strong> Intro</a></li><li class="chapter-item expanded "><a href="support.html"><strong aria-hidden="true">2.</strong> Support</a></li><li class="chapter-item expanded "><a href="interface-language.html"><strong aria-hidden="true">3.</strong> Interface Language</a></li><li class="chapter-item expanded "><a href="syncing.html"><strong aria-hidden="true">4.</strong> Cloud Sync</a></li><li class="chapter-item expanded "><a href="shared-decks.html"><strong aria-hidden="true">5.</strong> Shared Decks</a></li><li class="chapter-item expanded "><a href="deck-list.html"><strong aria-hidden="true">6.</strong> Deck List</a></li><li class="chapter-item expanded "><a href="study-screen.html"><strong aria-hidden="true">7.</strong> Study Screen</a></li><li class="chapter-item expanded "><a href="study-tools.html"><strong aria-hidden="true">8.</strong> Study Tools</a></li><li class="chapter-item expanded "><a href="editing.html"><strong aria-hidden="true">9.</strong> Adding &amp; Editing</a></li><li class="chapter-item expanded "><a href="preferences.html"><strong aria-hidden="true">10.</strong> Preferences</a></li><li class="chapter-item expanded "><a href="collection-transfer.html"><strong aria-hidden="true">11.</strong> Collection Transfer</a></li><li class="chapter-item expanded "><a href="tts.html"><strong aria-hidden="true">12.</strong> Text to Speech</a></li><li class="chapter-item expanded "><a href="mathjax.html"><strong aria-hidden="true">13.</strong> MathJax</a></li><li class="chapter-item expanded "><a href="custom-fonts.html"><strong aria-hidden="true">14.</strong> Custom Fonts</a></li><li class="chapter-item expanded "><a href="night-mode.html"><strong aria-hidden="true">15.</strong> Night Mode Styling</a></li><li class="chapter-item expanded "><a href="url-schemes.html" class="active"><strong aria-hidden="true">16.</strong> URL Schemes</a></li><li class="chapter-item expanded "><a href="reinstalling.html"><strong aria-hidden="true">17.</strong> Reinstalling</a></li><li class="chapter-item expanded "><a href="beta-testing.html"><strong aria-hidden="true">18.</strong> Beta Testing</a></li><li class="chapter-item expanded "><a href="more.html"><strong aria-hidden="true">19.</strong> More Features</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                        
+                    </div>
+
+                    <h1 class="menu-title">AnkiMobile Manual</h1>
+
+                    <div class="right-buttons">
+                        
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        
+                        
+                        <a href="https://github.com/ankitects/ankimobile-docs/" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1><a class="header" href="#url-schemes" id="url-schemes">URL Schemes</a></h1>
+<p>AnkiMobile supports URL schemes for opening third party dictionaries,
+and for adding content to AnkiMobile from other applications.</p>
+<h2><a class="header" href="#ankimobiles-url-scheme" id="ankimobiles-url-scheme">AnkiMobile’s URL Scheme</a></h2>
+<p>A 'URL Scheme' is like a link to a website, but it instead links to an
+app. A simple example is:</p>
+<pre><code>anki://
+</code></pre>
+<p>If you type this into Safari on your device, you’ll see AnkiMobile open
+up.</p>
+<p>From 2.0.30 onwards, AnkiMobile provides a scheme for adding new notes
+to your collection. This can be used with dictionary apps that support
+calling other apps via URL schemes, and with automation apps like
+Workflow.</p>
+<p>The scheme to add cards looks like this:</p>
+<pre><code>anki://x-callback-url/addnote?profile=User 1&amp;type=Basic&amp;deck=Default&amp;fldFront=front text&amp;fldBack=back text
+</code></pre>
+<p>The first part must always be there:</p>
+<p>anki://x-callback-url/addnote?</p>
+<p>After the first part, keys and values are separated by an ampersand. The
+following keys must always be provided:</p>
+<ul>
+<li>
+<p>profile=&lt;profile name&gt;</p>
+</li>
+<li>
+<p>type=&lt;note type name&gt;</p>
+</li>
+<li>
+<p>deck=&lt;deck name&gt;</p>
+</li>
+</ul>
+<p>Fields are entered by prefixing their name with &quot;fld&quot;. So if your first
+field is called &quot;Text&quot;, the key would be &quot;fldText&quot;. The field text is
+interpreted as HTML, so if you wanted a newline in the text you’d use
+something like &quot;line 1&lt;br&gt;line 2&quot;.</p>
+<p>Special characters in the URL must be escaped. For example, if you have
+spaces in a field, they must be represented with <code>%20</code>. If you’re using
+the Shortcuts app, there is a URL encode action which you may find
+useful.</p>
+<p>The remaining keys are optional:</p>
+<ul>
+<li>
+<p>tags=&lt;tags separated by space&gt;</p>
+</li>
+<li>
+<p>dupes=1 - if provided, allow a note to be added even if the same
+content is on an existing note.</p>
+</li>
+<li>
+<p>x-success=&lt;url scheme for another app&gt; - use to automatically
+return to another app after the note is added.</p>
+</li>
+</ul>
+<p>If a field you provide is a link to an image or audio file, AnkiMobile
+will automatically download that media and place a link to it in the
+field. Eg:</p>
+<pre><code>fldFront=http://example.com/image.jpg
+</code></pre>
+<p>The link will only be downloaded if it ends with a recognized file
+extension. If your link is to a dynamic webpage, you can add a fake
+argument with the extension at the end, eg
+<code>http://example.com/getImage?imgID=1234&amp;fakePath=foo.jpg</code>. Be careful to
+escape the URL before including it in the URL scheme, as otherwise ? and
+&amp; characters will be interpreted as part of the URL scheme instead of
+the URL.</p>
+<h2><a class="header" href="#dictionary-links" id="dictionary-links">Dictionary Links</a></h2>
+<p>The desktop version of Anki provides the ability to open a web page
+based on the contents of a field, for easily creating a link to an
+online dictionary site. This is documented <a href="https://apps.ankiweb.net/docs/manual.html#_dictionary_links">in this
+section</a> of
+the manual, though please start from the <a href="https://apps.ankiweb.net/docs/manual.html#templates">cards &amp;
+templates</a> section
+as the above link assumes you have read it.</p>
+<p>Like the desktop, AnkiMobile supports links to dictionary websites. In
+addition to that, you can also link to different dictionary apps that
+you have installed on your device using a URL scheme.</p>
+<p>Some dictionary apps provide a URL scheme that allows you to provide a
+particular phrase to search for. For example, an app called iDict+
+allows the following type of URL:</p>
+<pre><code>idictplus://?search=mysearchtext
+</code></pre>
+<p>If you have iDict+ installed and type that into Safari, iDict+ should
+open up and immediately search for &quot;mysearchtext&quot;.</p>
+<p>iDict+ also supports passing a return link. We can replace the above
+with:</p>
+<pre><code>idictplus://?search=txt&amp;scheme=anki://
+</code></pre>
+<p>If you type that into Safari, it will search for &quot;mysearchtext&quot; like
+before, but will also provide a &quot;return&quot; button that when pressed will
+open up Anki.</p>
+<p>By taking that text and combining it with the instructions for the
+desktop version linked above, it’s possible to have a link on your cards
+that searches for a word in another app, and then allows you to return
+to Anki when you’re done.</p>
+<p>Unfortunately, there is no standard for URL schemes: some apps implement
+them, some don’t, and the way they implement them can different. For
+example, in the app called &quot;Kotoba!&quot;, the URL scheme is:</p>
+<pre><code>kotoba://dictionary?word=mysearchtext
+</code></pre>
+<p>Note how not only the app name differs but also the text after it, and
+how Kotoba! doesn’t provide the ability to automatically return to the
+app that opened it, meaning that you need to double tap the home button
+and manually return to AnkiMobile.</p>
+<p>Some dictionary apps publish their URL scheme in their documentation. If
+you’re using a dictionary app that doesn’t, please contact the authors
+and ask them for more information.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                            <a rel="prev" href="night-mode.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+
+                        
+                            <a rel="next" href="reinstalling.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                    <a rel="prev" href="night-mode.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+                    <a rel="next" href="reinstalling.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+
+        
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        
+
+        
+
+        
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+
+    </body>
+</html>

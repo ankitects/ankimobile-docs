@@ -1,0 +1,531 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Preferences - AnkiMobile Manual</title>
+        
+        
+
+
+        <!-- Custom HTML head -->
+        
+
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        
+        <link rel="icon" href="favicon.svg">
+        
+        
+        <link rel="shortcut icon" href="favicon.png">
+        
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        
+        <link rel="stylesheet" href="css/print.css" media="print">
+        
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        
+        <link rel="stylesheet" href="fonts/fonts.css">
+        
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="intro.html"><strong aria-hidden="true">1.</strong> Intro</a></li><li class="chapter-item expanded "><a href="support.html"><strong aria-hidden="true">2.</strong> Support</a></li><li class="chapter-item expanded "><a href="interface-language.html"><strong aria-hidden="true">3.</strong> Interface Language</a></li><li class="chapter-item expanded "><a href="syncing.html"><strong aria-hidden="true">4.</strong> Cloud Sync</a></li><li class="chapter-item expanded "><a href="shared-decks.html"><strong aria-hidden="true">5.</strong> Shared Decks</a></li><li class="chapter-item expanded "><a href="deck-list.html"><strong aria-hidden="true">6.</strong> Deck List</a></li><li class="chapter-item expanded "><a href="study-screen.html"><strong aria-hidden="true">7.</strong> Study Screen</a></li><li class="chapter-item expanded "><a href="study-tools.html"><strong aria-hidden="true">8.</strong> Study Tools</a></li><li class="chapter-item expanded "><a href="editing.html"><strong aria-hidden="true">9.</strong> Adding &amp; Editing</a></li><li class="chapter-item expanded "><a href="preferences.html" class="active"><strong aria-hidden="true">10.</strong> Preferences</a></li><li class="chapter-item expanded "><a href="collection-transfer.html"><strong aria-hidden="true">11.</strong> Collection Transfer</a></li><li class="chapter-item expanded "><a href="tts.html"><strong aria-hidden="true">12.</strong> Text to Speech</a></li><li class="chapter-item expanded "><a href="mathjax.html"><strong aria-hidden="true">13.</strong> MathJax</a></li><li class="chapter-item expanded "><a href="custom-fonts.html"><strong aria-hidden="true">14.</strong> Custom Fonts</a></li><li class="chapter-item expanded "><a href="night-mode.html"><strong aria-hidden="true">15.</strong> Night Mode Styling</a></li><li class="chapter-item expanded "><a href="url-schemes.html"><strong aria-hidden="true">16.</strong> URL Schemes</a></li><li class="chapter-item expanded "><a href="reinstalling.html"><strong aria-hidden="true">17.</strong> Reinstalling</a></li><li class="chapter-item expanded "><a href="beta-testing.html"><strong aria-hidden="true">18.</strong> Beta Testing</a></li><li class="chapter-item expanded "><a href="more.html"><strong aria-hidden="true">19.</strong> More Features</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                        
+                    </div>
+
+                    <h1 class="menu-title">AnkiMobile Manual</h1>
+
+                    <div class="right-buttons">
+                        
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        
+                        
+                        <a href="https://github.com/ankitects/ankimobile-docs/" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1><a class="header" href="#preferences" id="preferences">Preferences</a></h1>
+<p>The preferences screen can be accessed by tapping on the gear icon at
+the top right of the deck list. It allows you to customize various
+application settings and how AnkiMobile appears.</p>
+<p>The Preferences screen is divided up into different sections, which are
+covered below.</p>
+<h2><a class="header" href="#syncing" id="syncing">Syncing</a></h2>
+<p>The syncing screen allows you to customize <a href="syncing.html">cloud synchronization</a> with
+AnkiWeb.</p>
+<p><strong>Sync Sounds &amp; Images</strong><br />
+By default, AnkiMobile will sync sounds and images as well as your cards
+and review history. If you disable this option, sounds and images will
+not be synced by AnkiMobile.</p>
+<p><strong>Full Sync</strong><br />
+The full sync button allows you to force a full upload or download of
+your cards. This is useful if you accidentally deleted some cards and
+want to revert to the local or remote version, instead of having those
+deletions propagate to other devices. After tapping the button, you’ll
+be given a choice of whether you want to upload your collection or
+download it from AnkiWeb. Please note this option only affects how
+cards, notes and review history is transferred - it does not change how
+sounds and images are synced.</p>
+<h2><a class="header" href="#review" id="review">Review</a></h2>
+<p>The review screen allows you to customize how AnkiMobile behaves when
+you’re reviewing cards.</p>
+<p><strong>Feedback Ticks</strong><br />
+Flash a tick or cross in the top right to confirm your answer choice.</p>
+<p><strong>Tools Overlay Button</strong><br />
+Show the gear/cog icon on the study screen. If you prefer not to see it,
+you can assign the tools action to the top bar instead.</p>
+<p><strong>Tools Overlay Position</strong><br />
+Allows you to put the tools button on the left.</p>
+<p><strong>Audio Buttons</strong><br />
+Allows you to hide the play button that appears for each audio file
+you’ve placed on the card. Useful if you’d rather replay audio via the
+&quot;Replay Audio&quot; action bound to a swipe or tap.</p>
+<p><strong>Always Duck + Ignore Mute</strong><br />
+When enabled, AnkiMobile will quieten any music you have playing in the
+background, and will automatically play audio even when the
+mute/vibrate/silent switch is turned on.</p>
+<p><strong>Answer Keeps Zoom</strong><br />
+By default, if you have zoomed in on a card, the screen will zoom out
+when you reveal the answer. If you enable this option, AnkiMobile will
+not zoom out.</p>
+<p><strong>Never Type Answer</strong><br />
+If you have set up your cards to ask you to type in the answer (as
+explained in <a href="https://apps.ankiweb.net/docs/manual.html#templates">this
+section</a> of the
+desktop manual), AnkiMobile will display a keyboard on such cards and
+allow you to check your answer. If you find typing on a mobile device
+inconvenient, you can use this option to disable the keyboard for all
+cards.</p>
+<p><strong>Shake Action</strong><br />
+Allows you to customize what happens when you shake your device. The
+default action is to undo the previous answer.</p>
+<p><strong>Double Tap Prevention</strong><br />
+This option ignores a second tap when two taps are made in quick
+succession, so that you don’t accidentally reveal the answer or advance
+to the next card. If you review your cards very quickly, you may wish to
+select a shorter detection time.</p>
+<h3><a class="header" href="#scheduling" id="scheduling">Scheduling</a></h3>
+<p>These options affect the way Anki schedules cards in all decks.</p>
+<p><strong>New/Review Order</strong><br />
+Whether Anki should introduce new cards before, after, or together with
+review cards.</p>
+<p><strong>Day Starts</strong><br />
+Controls when a new day starts and new cards become available. Default
+is 04:00, which means new cards become available at 4AM.</p>
+<p><strong>Learn Ahead Minutes</strong><br />
+The number of minutes to look ahead when the only cards remaining to
+review with a next repetition time in the future. The default is 20
+minutes, which means cards due to show in 10 minutes will be shown
+immediately if nothing else is available to show.</p>
+<h3><a class="header" href="#notifications" id="notifications">Notifications</a></h3>
+<p>When enabled, Anki will display an alert at the selected time of day,
+reminding you to study and telling you how many reviews are waiting.</p>
+<h3><a class="header" href="#top-bar" id="top-bar">Top Bar</a></h3>
+<p>You can assign frequently used actions to the top bar for convenient
+access. For an explanation of the available actions, please see the
+<a href="study-tools.html#actions">actions list</a>.</p>
+<h3><a class="header" href="#bottom-bar" id="bottom-bar">Bottom Bar</a></h3>
+<p><strong>Show Bottom Bar</strong><br />
+Hides or shows the bottom area that shows the answer buttons and card
+counts.</p>
+<p><strong>Remaining Count</strong><br />
+Whether to show the card counts when the question side of a card is
+being shown.</p>
+<p><strong>Answer Buttons</strong><br />
+Whether to show the answer buttons on the answer side of a card.</p>
+<p><strong>Next Times</strong><br />
+Whether to show the next study time above each of the answer buttons.</p>
+<h3><a class="header" href="#taps" id="taps">Taps</a></h3>
+<p>When you’re reviewing, you can tap on different parts of a card in order
+to trigger different actions.</p>
+<p>Anki divides the screen into 9 sections:</p>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><p>Top Left</p></td>
+<td><p>Top Center</p></td>
+<td><p>Top Right</p></td>
+</tr>
+<tr class="even">
+<td><p>Mid Left</p></td>
+<td><p>Mid Center</p></td>
+<td><p>Mid Right</p></td>
+</tr>
+<tr class="odd">
+<td><p>Bottom Left</p></td>
+<td><p>Bottom Center</p></td>
+<td><p>Bottom Right</p></td>
+</tr>
+</tbody>
+</table>
+<p>Each section can have a different action assigned to it if you wish, and
+the taps when the question is shown are also different from the taps
+when the answer is shown.</p>
+<p>By default, AnkiMobile responds as follows when the question in shown:</p>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><p>Show Answer</p></td>
+<td><p>Show Answer</p></td>
+<td><p>Show Answer</p></td>
+</tr>
+<tr class="even">
+<td><p>Show Answer</p></td>
+<td><p>Show Answer</p></td>
+<td><p>Show Answer</p></td>
+</tr>
+<tr class="odd">
+<td><p>Show Answer</p></td>
+<td><p>Show Answer</p></td>
+<td><p>Show Answer</p></td>
+</tr>
+</tbody>
+</table>
+<p>In other words, tapping anywhere on the screen will show the answer.</p>
+<p>When the answer is shown, by default AnkiMobile responds as follows:</p>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><p>Answer "Again"</p></td>
+<td><p>Off</p></td>
+<td><p>Answer "Good"</p></td>
+</tr>
+<tr class="even">
+<td><p>Answer "Again"</p></td>
+<td><p>Off</p></td>
+<td><p>Answer "Good"</p></td>
+</tr>
+<tr class="odd">
+<td><p>Answer "Again"</p></td>
+<td><p>Off</p></td>
+<td><p>Answer "Good"</p></td>
+</tr>
+</tbody>
+</table>
+<p>This allows you to tap on the left side of the screen to trigger the red
+button, and the right side of the screen to trigger the green button.
+Taps near the middle of the screen will be ignored.</p>
+<p>You can assign frequently used actions to taps for convenient access.
+For an explanation of the available actions, please see the <a href="study-tools.html#actions">actions
+list</a>.</p>
+<h3><a class="header" href="#swipes" id="swipes">Swipes</a></h3>
+<p>You can also swipe up, down, left or right across a card to trigger an
+action.</p>
+<p>To ensure swipes don’t interfere with your ability to scroll on a large
+card or select text, a swipe must begin from the far left or right side
+of the screen. Begin by placing your finger on the left or right side of
+the screen, and then move it up, down, left or right to trigger the
+relevant swipe.</p>
+<p>With the default settings:</p>
+<ul>
+<li>
+<p>Swiping left displays the tools window</p>
+</li>
+<li>
+<p>Swiping right returns to the deck list</p>
+</li>
+</ul>
+<p>You can assign frequently used actions to swipes for convenient access.
+For an explanation of the available actions, please see the <a href="study-tools.html#actions">actions
+list</a>.</p>
+<h3><a class="header" href="#scratchpad" id="scratchpad">Scratchpad</a></h3>
+<p><strong>Ignore Fingers</strong><br />
+When enabled, the scratchpad will only respond to the Apple Pencil.</p>
+<p><strong>Undo Clears All</strong><br />
+Reverses the behaviour of the undo button, so a quick tap clears
+everything, and a long press clears the last stroke.</p>
+<p><strong>Scratchpad Below Buttons</strong><br />
+Whether the scratchpad should be placed above or below the bottom bar.</p>
+<h3><a class="header" href="#auto-advance" id="auto-advance">Auto Advance</a></h3>
+<p><strong>Wait for Audio</strong><br />
+Don’t advance until the current audio stops playing.</p>
+<p><strong>Answer Action</strong><br />
+Whether to bury the card, answer it, show a popup reminder, or do
+nothing.</p>
+<h3><a class="header" href="#gamepads" id="gamepads">Gamepads</a></h3>
+<p>From AnkiMobile 2.0.53+, you can control the study screen with a game
+controller on iOS 13+. The controller must be supported by iOS, and
+already paired with your iOS device. Please see the following page for
+supported controllers, and how to set them up:</p>
+<p><a href="https://support.apple.com/en-au/HT210414">https://support.apple.com/en-au/HT210414</a></p>
+<p>The gamepads section of the preferences allows you to configure which
+actions are triggered when each button is pressed. You can assign an
+action to each direction on the d-pad, but the analog thumbpads can not
+be customized - they will always scroll the card up or down.</p>
+<h2><a class="header" href="#general" id="general">General</a></h2>
+<p><strong>Legacy Editor</strong><br />
+When enabled, Anki uses an older editor that has fewer features. It is
+provided for users stuck on iOS 12 or earlier, who use right-to-left
+languages. If you are on iOS 13 or don’t use a right-to-left language,
+the regular editor is a better choice.</p>
+<h2><a class="header" href="#theme" id="theme">Theme</a></h2>
+<p>The theme screen allows you to customize the bar colours AnkiMobile
+uses. The available options will depend on whether night mode or iOS
+13’s dark mode is enabled.</p>
+<p>To customize the appearance of your cards, you’ll need to alter your
+card templates. You can do this using the Card Template action in the
+tools screen, or by using the computer version. For more info, please
+see <a href="http://www.youtube.com/watch?v=F1j1Zx0mXME&amp;yt:cc=on">http://www.youtube.com/watch?v=F1j1Zx0mXME&amp;yt:cc=on</a></p>
+<h2><a class="header" href="#profiles" id="profiles">Profiles</a></h2>
+<p>Profiles allow multiple users to study with the same device. You can add
+profiles from the settings screen. To rename or remove a profile, swipe
+to the left on it.</p>
+<p>Each profile needs to be synced with its own AnkiWeb account. Please be
+careful not to sync two profiles with the same AnkiWeb ID, as this could
+lead to data loss.</p>
+<h2><a class="header" href="#backups" id="backups">Backups</a></h2>
+<p>AnkiMobile will automatically create backups of your collection for you.
+The backups include all your cards and statistics, but do not include
+sounds or images, since they take up a lot of space.</p>
+<p>The backup is taken in the background when you return to your device’s
+home screen, or switch to another app. A backup will only happen if more
+than an hour has elapsed since the last time a backup was created.
+AnkiMobile will store the last 15 backups.</p>
+<p>To restore from a backup, open the Backups section in the preferences,
+and tap on the backup you wish to restore to.</p>
+<p>It is also possible to customize the frequency and amount of backups
+that are created, via the settings at the top of the backups section.
+You can change 15 to a different number to adjust the number of backups</p>
+<ul>
+<li>set it to zero to disable backups completely.</li>
+</ul>
+<p>If you’re unable to get AnkiMobile to start due to a serious error, you
+can still retrieve the backups from the iTunes file sharing area:</p>
+<ol>
+<li>
+<p>Connect your Apple device to your computer via the USB cable.</p>
+</li>
+<li>
+<p>Open iTunes if it doesn’t open automatically.</p>
+</li>
+<li>
+<p>Locate Anki’s file sharing section with <a href="http://support.apple.com/kb/HT4094">Apple’s
+instructions</a>.</p>
+</li>
+<li>
+<p>Drag the your backup files from iTunes to your desktop.</p>
+</li>
+<li>
+<p>With the computer version of Anki, create a new, empty profile via
+File&gt;Switch Profile, and then File&gt;Import the latest backup
+apkg from within that profile to confirm that it’s ok. If it is
+corrupt, you can try a previous backup.</p>
+</li>
+</ol>
+<h2><a class="header" href="#check-database" id="check-database">Check Database</a></h2>
+<p>This will check your collection for a number of possible errors and fix
+them if possible.</p>
+<p>It also will remove any tags that are no longer used by any cards.</p>
+<h2><a class="header" href="#check-media" id="check-media">Check Media</a></h2>
+<p>This scans all your notes for references to sounds and images, and then
+checks to make sure that the sounds and images are available. It will
+display a report letting you know of any sounds or images that are
+missing, and any sounds or images that are not used by any cards. If you
+tap the delete button, the unused sounds or images will be deleted.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                            <a rel="prev" href="editing.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+
+                        
+                            <a rel="next" href="collection-transfer.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                    <a rel="prev" href="editing.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+                    <a rel="next" href="collection-transfer.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+
+        
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        
+
+        
+
+        
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+
+    </body>
+</html>

@@ -1,0 +1,379 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Study Tools - AnkiMobile Manual</title>
+        
+        
+
+
+        <!-- Custom HTML head -->
+        
+
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        
+        <link rel="icon" href="favicon.svg">
+        
+        
+        <link rel="shortcut icon" href="favicon.png">
+        
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        
+        <link rel="stylesheet" href="css/print.css" media="print">
+        
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        
+        <link rel="stylesheet" href="fonts/fonts.css">
+        
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="intro.html"><strong aria-hidden="true">1.</strong> Intro</a></li><li class="chapter-item expanded "><a href="support.html"><strong aria-hidden="true">2.</strong> Support</a></li><li class="chapter-item expanded "><a href="interface-language.html"><strong aria-hidden="true">3.</strong> Interface Language</a></li><li class="chapter-item expanded "><a href="syncing.html"><strong aria-hidden="true">4.</strong> Cloud Sync</a></li><li class="chapter-item expanded "><a href="shared-decks.html"><strong aria-hidden="true">5.</strong> Shared Decks</a></li><li class="chapter-item expanded "><a href="deck-list.html"><strong aria-hidden="true">6.</strong> Deck List</a></li><li class="chapter-item expanded "><a href="study-screen.html"><strong aria-hidden="true">7.</strong> Study Screen</a></li><li class="chapter-item expanded "><a href="study-tools.html" class="active"><strong aria-hidden="true">8.</strong> Study Tools</a></li><li class="chapter-item expanded "><a href="editing.html"><strong aria-hidden="true">9.</strong> Adding &amp; Editing</a></li><li class="chapter-item expanded "><a href="preferences.html"><strong aria-hidden="true">10.</strong> Preferences</a></li><li class="chapter-item expanded "><a href="collection-transfer.html"><strong aria-hidden="true">11.</strong> Collection Transfer</a></li><li class="chapter-item expanded "><a href="tts.html"><strong aria-hidden="true">12.</strong> Text to Speech</a></li><li class="chapter-item expanded "><a href="mathjax.html"><strong aria-hidden="true">13.</strong> MathJax</a></li><li class="chapter-item expanded "><a href="custom-fonts.html"><strong aria-hidden="true">14.</strong> Custom Fonts</a></li><li class="chapter-item expanded "><a href="night-mode.html"><strong aria-hidden="true">15.</strong> Night Mode Styling</a></li><li class="chapter-item expanded "><a href="url-schemes.html"><strong aria-hidden="true">16.</strong> URL Schemes</a></li><li class="chapter-item expanded "><a href="reinstalling.html"><strong aria-hidden="true">17.</strong> Reinstalling</a></li><li class="chapter-item expanded "><a href="beta-testing.html"><strong aria-hidden="true">18.</strong> Beta Testing</a></li><li class="chapter-item expanded "><a href="more.html"><strong aria-hidden="true">19.</strong> More Features</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                        
+                    </div>
+
+                    <h1 class="menu-title">AnkiMobile Manual</h1>
+
+                    <div class="right-buttons">
+                        
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        
+                        
+                        <a href="https://github.com/ankitects/ankimobile-docs/" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1><a class="header" href="#study-tools" id="study-tools">Study Tools</a></h1>
+<p>The tools screen will open when you tap on the gear/cog icon in the
+study screen.</p>
+<p>On the top right, there are buttons that will adjust the text size on
+your cards.</p>
+<p>The &quot;Frequent Actions&quot; section contains some commonly used actions. You
+can rearrange the actions there or remove actions by holding your finger
+on a button for a second or so.</p>
+<p>Below the &quot;Frequent Actions&quot; section is a list of all available actions
+in AnkiMobile. You can add these actions to the &quot;Frequent Actions&quot;
+section by long-pressing on them.</p>
+<h2><a class="header" href="#actions" id="actions">Actions</a></h2>
+<p>The following actions can be run from the tools screen, or by assigning
+them to a tap, swipe, or the top bar in the preferences.</p>
+<p><strong>Add</strong><br />
+Opens a new window to add cards to the deck.</p>
+<p><strong>Answer &quot;Again&quot;</strong><br />
+When the answer screen is shown, choose the red button, indicating you
+wish to review the card again soon. This is useful when you forgot a
+card or wish to review it more frequently.</p>
+<p><strong>Answer &quot;Hard&quot;</strong><br />
+When the answer screen is shown and there are four buttons, choose the
+second button from the left, indicating you found the card hard to
+remember.</p>
+<p><strong>Answer &quot;Good&quot;</strong><br />
+When the answer screen is shown, choose the green button. This is the
+button you should end up using the most.</p>
+<p><strong>Answer &quot;Easy&quot;</strong><br />
+When the answer screen is shown, choose the button on the right,
+indicating you found the card too easy to remember and would like a much
+longer delay.</p>
+<p><strong>Auto Advance</strong><br />
+Allows you to automatically reveal the answer, and automatically rate or
+bury cards. You can customize the behaviour in the preferences screen.</p>
+<p><strong>Bottom Bar</strong><br />
+Hides or shows the bottom bar, where the answer buttons and card counts
+are shown.</p>
+<p><strong>Browse</strong><br />
+Opens the card browser, where you can search for and modify cards.</p>
+<p><strong>Bury Card</strong><br />
+Hides the current card from review. It will be shown again the next day,
+or when you manually unbury cards.</p>
+<p><strong>Bury Note</strong><br />
+Hides the current note from review. It will be shown again the next day,
+or when you manually unbury cards.</p>
+<p><strong>Card Info</strong><br />
+Shows information about the current card.</p>
+<p><strong>Card Template</strong><br />
+Allows you to edit the card template, changing which fields are shown on
+the front and back of the card, and the card styling.</p>
+<p><strong>Current Audio +5s</strong><br />
+Jump forward 5 seconds in the currently playing audio.</p>
+<p><strong>Current Audio -5s</strong><br />
+Jump backward 5 seconds in the currently playing audio.</p>
+<p><strong>Custom Study</strong><br />
+Allows you to study outside of the normal schedule. Please see the
+documentation of the computer version for more information on custom
+study presets.</p>
+<p><strong>Deck Statistics</strong><br />
+Shows graphs and statistics about your deck or collection.</p>
+<p><strong>Decks</strong><br />
+Returns to the deck list.</p>
+<p><strong>Delete Note</strong><br />
+Deletes the currently shown note and all of its cards. If you’re not
+studying in multiple directions, this will just delete a single card.</p>
+<p><strong>Edit</strong><br />
+Edits the current card.</p>
+<p><strong>Empty</strong><br />
+Removes all cards from the current filtered deck.</p>
+<p><strong>Filter/Cram</strong><br />
+Allows you to create a temporary deck based on search criteria such as
+&quot;tag:hard&quot;. Please see the documentation of the computer version for
+more information on filtered decks.</p>
+<p><strong>Flag 1 - 4</strong><br />
+Sets or clears the card’s flag. Flagging cards allows you to find them
+easily in the browse screen later.</p>
+<p><strong>Mark</strong><br />
+Adds a tag called &quot;Marked&quot; to the current note, so it can be easily
+found in a search.</p>
+<p><strong>Mark &amp; Bury</strong><br />
+Marks the card, then buries it.</p>
+<p><strong>Mark &amp; Suspend</strong><br />
+Marks the card, then suspends it.</p>
+<p><strong>Night Mode</strong><br />
+Switch the interface between light and dark mode. On iOS 13, use the
+system dark mode setting instead.</p>
+<p><strong>Off</strong><br />
+Don’t do anything. Useful if you want to disable certain swipes, tap
+zones and so on. Not shown in the tools screen.</p>
+<p><strong>Pause Audio</strong><br />
+Temporarily stops or restarts the currently playing audio file.</p>
+<p><strong>Rebuild</strong><br />
+When in a filtered or custom study deck, rerun the search to fetch any
+cards that may newly match the criteria.</p>
+<p><strong>Record Voice</strong><br />
+Allows you to create a temporary recording of your voice, to compare it
+to audio that you have on your card.</p>
+<p><strong>Replay Audio</strong><br />
+Replay the card’s audio. You can customize whether the audio in the
+question is replayed while the answer is shown in the computer Anki.</p>
+<p><strong>Reset Card</strong><br />
+Turn the current card back into a new card.</p>
+<p><strong>Scratchpad</strong><br />
+Show or hide the writing pad, allowing you to practice writing
+characters during review. Anki will remember the on/off state for each
+card type. You can tap once on the undo button to undo a stroke, or hold
+on it for a second to clear all strokes. On devices that support
+pressure sensitivity (iPhone 6S, iPad w/ Apple Pencil), the stroke width
+will depend on how hard you press.</p>
+<p><strong>Scratchpad Size</strong><br />
+Alters the size of the scratchpad window.</p>
+<p><strong>Set Due Date</strong><br />
+Make the card a review card if it is not already one, and make it due in
+the number of days you specify. If you choose 0 days, the card will be
+ready to review immediately.</p>
+<p><strong>Show Answer</strong><br />
+Reveals the answer when a card’s question is shown.</p>
+<p><strong>Study Options</strong><br />
+Show the study options screen.</p>
+<p><strong>Suspend Card</strong><br />
+Prevent current card from being shown during review until you unsuspend
+it via the search action.</p>
+<p><strong>Suspend Note</strong><br />
+Prevent all cards of current note from being shown during review until
+you unsuspend them via the search action.</p>
+<p><strong>Top bar</strong><br />
+Show or hide the bar at the top of the screen.</p>
+<p><strong>Tools</strong><br />
+Show the tools screen.</p>
+<p><strong>Unbury Deck</strong><br />
+Makes any buried cards in the current deck ready for review again.</p>
+<p><strong>Undo</strong><br />
+Undoes the last review.</p>
+<h1><a class="header" href="#study-options" id="study-options">Study Options</a></h1>
+<p>The study options can be accessed from the <a href="#the-tools-screen">tools</a> screen.
+Almost all the options available in the computer version can also be
+adjusted in AnkiMobile. For a description of what everything does,
+please see the <a href="https://apps.ankiweb.net/docs/manual.html#deckoptions">computer
+documentation</a>.
+While some of the options have different wording, the behaviour is the
+same as the computer version.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                            <a rel="prev" href="study-screen.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+
+                        
+                            <a rel="next" href="editing.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                    <a rel="prev" href="study-screen.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+                    <a rel="next" href="editing.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+
+        
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        
+
+        
+
+        
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+
+    </body>
+</html>

@@ -24,7 +24,7 @@ modifications (such as importing a shared deck you downloaded to your
 computer), and then export your collection and import it back into your
 mobile device.
 
-Importing individual decks is not currently possible, but is planned
+Exporting individual decks is not currently possible, but is planned
 for the future.
 
 ## Computer to iPhone/iPad

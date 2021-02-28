@@ -279,12 +279,6 @@ be customized - they will always scroll the card up or down.
 
 ## General
 
-**Legacy Editor**  
-When enabled, Anki uses an older editor that has fewer features. It is
-provided for users stuck on iOS 12 or earlier, who use right-to-left
-languages. If you are on iOS 13 or don’t use a right-to-left language,
-the regular editor is a better choice.
-
 ## Theme
 
 The theme screen allows you to customize the bar colours AnkiMobile

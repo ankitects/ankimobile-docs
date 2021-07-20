@@ -1,9 +1,13 @@
+env:
+  cname: docs.ankimobile.net
+
 name: github pages
 
 on:
   push:
     branches:
       - main
+      - test
 
 jobs:
   deploy:
@@ -11,17 +15,12 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: Setup mdBook
-        uses: peaceiris/actions-mdbook@v1
-        with:
-          mdbook-version: "0.4.5"
-          # mdbook-version: 'latest'
-
-      - run: mdbook build
+      - name: Build and check
+        run: .github/workflows/build.sh
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./book
-          cname: docs.ankimobile.net
+          publish_dir: ./book/html
+          cname: ${{ env.cname }}

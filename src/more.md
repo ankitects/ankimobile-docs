@@ -2,7 +2,7 @@
 
 ## Javascript
 
-The [warnings](https://docs.ankiweb.net/#/templates/styling?id=javascript)
+The [warnings](https://docs.ankiweb.net/templates/styling.html#javascript)
 that apply to the computer version also apply to AnkiMobile.
 
 In addition to the above, another thing to be aware of in AnkiMobile is
@@ -17,7 +17,7 @@ taps through to the element.
 ## Play Buttons
 
 To change the styling of the audio replay buttons, please see
-<https://docs.ankiweb.net/#/templates/styling?id=audio-replay-buttons>
+<https://docs.ankiweb.net/templates/styling.html#audio-replay-buttons>
 
 ## Image Resizing
 

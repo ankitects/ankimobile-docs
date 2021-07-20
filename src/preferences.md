@@ -60,7 +60,7 @@ not zoom out.
 **Never Type Answer**  
 If you have set up your cards to ask you to type in the answer (as
 explained in [this
-section](https://apps.ankiweb.net/docs/manual.html#templates) of the
+section](https://docs.ankiweb.net/templates/intro.html) of the
 desktop manual), AnkiMobile will display a keyboard on such cards and
 allow you to check your answer. If you find typing on a mobile device
 inconvenient, you can use this option to disable the keyboard for all

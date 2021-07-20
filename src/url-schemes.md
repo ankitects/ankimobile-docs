@@ -74,9 +74,9 @@ the URL.
 The desktop version of Anki provides the ability to open a web page
 based on the contents of a field, for easily creating a link to an
 online dictionary site. This is documented [in this
-section](https://apps.ankiweb.net/docs/manual.html#_dictionary_links) of
+section](https://docs.ankiweb.net/templates/fields.html#dictionary-links) of
 the manual, though please start from the [cards &
-templates](https://apps.ankiweb.net/docs/manual.html#templates) section
+templates](https://docs.ankiweb.net/templates/intro.html) section
 as the above link assumes you have read it.
 
 Like the desktop, AnkiMobile supports links to dictionary websites. In

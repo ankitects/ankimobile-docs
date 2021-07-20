@@ -187,6 +187,6 @@ The study options can be accessed from the tools screen.
 Almost all the options available in the computer version can also be
 adjusted in AnkiMobile. For a description of what everything does,
 please see the [computer
-documentation](https://apps.ankiweb.net/docs/manual.html#deckoptions).
+documentation](https://docs.ankiweb.net/deck-options.html).
 While some of the options have different wording, the behaviour is the
 same as the computer version.

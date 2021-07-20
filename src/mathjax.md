@@ -11,4 +11,4 @@ the following on your card:
 
     \[\sqrt{-1}\]
 
-More information is available in the [computer manual](https://docs.ankiweb.net/#/math).
+More information is available in the [computer manual](https://docs.ankiweb.net/math.html#mathjax).

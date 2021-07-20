@@ -2,7 +2,7 @@
 
 If you have not used Anki on a computer before, please have a look at
 the first [intro
-video](https://docs.ankiweb.net/#/getting-started?id=videos) before
+video](https://docs.ankiweb.net/getting-started.html#videos) before
 reading on, as it explains the basic review process.
 
 When you tap on a deck in the deck list, the study screen will load, and
@@ -20,7 +20,7 @@ On the bottom of the screen you’ll see three numbers. From the left,
 these correspond to new cards, learning cards, and cards to review.
 These are explained in more detail in the intro videos for the desktop
 program, so please [check them
-out](https://docs.ankiweb.net/#/getting-started?id=videos) if you
+out](https://docs.ankiweb.net/getting-started.html#videos) if you
 haven’t already.
 
 When you’ve looked at a card’s question and remembered the answer, or

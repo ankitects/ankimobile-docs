@@ -4,49 +4,30 @@
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
         <title>AnkiMobile Manual</title>
-        
         <meta name="robots" content="noindex" />
-        
-        
-
-
         <!-- Custom HTML head -->
         
-
 
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="theme-color" content="#ffffff" />
 
-        
         <link rel="icon" href="favicon.svg">
-        
-        
         <link rel="shortcut icon" href="favicon.png">
-        
         <link rel="stylesheet" href="css/variables.css">
         <link rel="stylesheet" href="css/general.css">
         <link rel="stylesheet" href="css/chrome.css">
-        
         <link rel="stylesheet" href="css/print.css" media="print">
-        
-
         <!-- Fonts -->
         <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
-        
         <link rel="stylesheet" href="fonts/fonts.css">
-        
-
         <!-- Highlight.js Stylesheets -->
         <link rel="stylesheet" href="highlight.css">
         <link rel="stylesheet" href="tomorrow-night.css">
         <link rel="stylesheet" href="ayu-highlight.css">
 
         <!-- Custom theme stylesheets -->
-        
-
-        
     </head>
     <body>
         <!-- Provide site root to javascript -->
@@ -122,33 +103,26 @@
                             <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
                             <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
                         </ul>
-                        
                         <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
                             <i class="fa fa-search"></i>
                         </button>
-                        
                     </div>
 
                     <h1 class="menu-title">AnkiMobile Manual</h1>
 
                     <div class="right-buttons">
-                        
                         <a href="print.html" title="Print this book" aria-label="Print this book">
                             <i id="print-button" class="fa fa-print"></i>
                         </a>
-                        
-                        
                         <a href="https://github.com/ankitects/ankimobile-docs/" title="Git repository" aria-label="Git repository">
                             <i id="git-repository-button" class="fa fa-github"></i>
                         </a>
-                        
                     </div>
                 </div>
 
-                
                 <div id="search-wrapper" class="hidden">
                     <form id="searchbar-outer" class="searchbar-outer">
-                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
                     </form>
                     <div id="searchresults-outer" class="searchresults-outer hidden">
                         <div id="searchresults-header" class="searchresults-header"></div>
@@ -156,8 +130,6 @@
                         </ul>
                     </div>
                 </div>
-                
-
                 <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
                 <script type="text/javascript">
                     document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
@@ -169,13 +141,13 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1><a class="header" href="#introduction" id="introduction">Introduction</a></h1>
+                        <h1 id="introduction"><a class="header" href="#introduction">Introduction</a></h1>
 <p>Thank you for buying AnkiMobile! Anki development would not be able to
 continue without your support, so it is greatly appreciated.</p>
 <p>Some basic concepts covered in the <a href="https://docs.ankiweb.net">computer
 manual</a> are not repeated
 here, so please check it out if you have not already done so.</p>
-<h2><a class="header" href="#legal" id="legal">Legal</a></h2>
+<h2 id="legal"><a class="header" href="#legal">Legal</a></h2>
 <p><strong>Privacy</strong></p>
 <p>No data you store in AnkiMobile is shared with us or other Anki users by
 default. If you use the optional synchronization feature, please see
@@ -184,7 +156,7 @@ default. If you use the optional synchronization feature, please see
 <p>Apple, the Apple logo, iPhone, iPad and iPod Touch are trademarks of
 Apple Inc., registered in the U.S. and other countries. App Store is a
 service mark of Apple Inc.</p>
-<h1><a class="header" href="#support" id="support">Support</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="support"><a class="header" href="#support">Support</a></h1>
 <p>There are two ways to get help with AnkiMobile. Both are regularly checked
 by Anki's developer, so there's no need to post the same question on both
 sites - please pick the one you prefer.</p>
@@ -195,10 +167,10 @@ the community may be able to answer you faster.</li>
 <li>There is a <a href="https://anki.tenderapp.com/discussions/private">private helpdesk</a> - messages
 posted here will not be visible to other users.</li>
 </ul>
-<h1><a class="header" href="#user-interface-language" id="user-interface-language">User Interface Language</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="user-interface-language"><a class="header" href="#user-interface-language">User Interface Language</a></h1>
 <p>AnkiMobile's interface has been translated into a few different languages. Your
 iOS settings control which language AnkiMobile will appear in.</p>
-<h2><a class="header" href="#wrong-language" id="wrong-language">Wrong Language</a></h2>
+<h2 id="wrong-language"><a class="header" href="#wrong-language">Wrong Language</a></h2>
 <p>If AnkiMobile is not appearing in your desired language, please go to the <strong>iOS
 Settings app &gt; General &gt; Language &amp; Region</strong>. In that section, you can specify
 the languages you prefer. If you want English to be used in AnkiMobile, please
@@ -206,7 +178,7 @@ ensure English is listed above the language you don't want to see. If your
 native language is not English, you can put your native language first.</p>
 <p>You can see
 the list of available languages on AnkiMobile's app store page.</p>
-<h2><a class="header" href="#app-specific-settings" id="app-specific-settings">App-specific settings</a></h2>
+<h2 id="app-specific-settings"><a class="header" href="#app-specific-settings">App-specific settings</a></h2>
 <p>If you are on iOS 13, you can also control the language on a per-app basis. For
 example, if you want all apps on your device to appear in Chinese, but want Anki
 to show in English, you can do this by going to the Settings app.</p>
@@ -222,15 +194,15 @@ two or more languages shown already, you can skip this step.</li>
 <p>Some users have reported that AnkiMobile did not appear in the iOS Settings screen
 until they went into AnkiMobile's <strong>Preferences &gt; Review &gt; Notifications</strong> section and
 enabled notifications.</p>
-<h2><a class="header" href="#new-translations" id="new-translations">New Translations</a></h2>
+<h2 id="new-translations"><a class="header" href="#new-translations">New Translations</a></h2>
 <p>If you would like to help translate AnkiMobile into another language, please see <a href="https://translating.ankiweb.net">https://translating.ankiweb.net</a></p>
-<h1><a class="header" href="#cloud-sync" id="cloud-sync">Cloud Sync</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="cloud-sync"><a class="header" href="#cloud-sync">Cloud Sync</a></h1>
 <p>Anki has a free cloud synchronization service called AnkiWeb that makes
 it easy to keep your card decks in sync between mobile devices and your
 computer. If you are an existing Anki user with cards on your computer,
 syncing is the easiest way to start using those cards on your mobile device
 as well.</p>
-<h2><a class="header" href="#intro-videos" id="intro-videos">Intro Videos</a></h2>
+<h2 id="intro-videos"><a class="header" href="#intro-videos">Intro Videos</a></h2>
 <p>Please check out these short videos that explain syncing:</p>
 <ul>
 <li><a href="https://www.youtube.com/watch?v=YkiM4DPzSVc&amp;list=PLGgmaKOIHykFoomqkBJAyGiDQ2kyiuTao">Initial Setup</a></li>
@@ -238,7 +210,7 @@ as well.</p>
 <li><a href="https://www.youtube.com/watch?v=UEAcpfMQnjo&amp;list=PLGgmaKOIHykFoomqkBJAyGiDQ2kyiuTao&amp;index=3">One-Way Syncs</a></li>
 </ul>
 <p>If you'd prefer not to watch videos, please read on.</p>
-<h2><a class="header" href="#creating-an-account" id="creating-an-account">Creating an Account</a></h2>
+<h2 id="creating-an-account"><a class="header" href="#creating-an-account">Creating an Account</a></h2>
 <p>To sync with AnkiWeb, you’ll first need to create an account. If you
 have used AnkiWeb in the past, you can skip this step.</p>
 <ol>
@@ -249,7 +221,7 @@ have used AnkiWeb in the past, you can skip this step.</p>
 <p>Type in your email address and a password of your choice.</p>
 </li>
 </ol>
-<h2><a class="header" href="#computer-to-iphoneipad" id="computer-to-iphoneipad">Computer to iPhone/iPad</a></h2>
+<h2 id="computer-to-iphoneipad"><a class="header" href="#computer-to-iphoneipad">Computer to iPhone/iPad</a></h2>
 <p>If you have decks on your computer and would like them to be synced to
 AnkiMobile:</p>
 <ol>
@@ -268,7 +240,7 @@ from AnkiWeb. Please make sure you <a href="https://faqs.ankiweb.net/media-files
 syncing</a>.</p>
 </li>
 </ol>
-<h2><a class="header" href="#iphoneipad-to-computer" id="iphoneipad-to-computer">iPhone/iPad to Computer</a></h2>
+<h2 id="iphoneipad-to-computer"><a class="header" href="#iphoneipad-to-computer">iPhone/iPad to Computer</a></h2>
 <p>If you have decks in your phone/iPad and would like them to be synced to
 the computer version:</p>
 <ol>
@@ -285,7 +257,7 @@ of the Anki window.</p>
 cards from AnkiWeb.</p>
 </li>
 </ol>
-<h2><a class="header" href="#subsequent-syncs" id="subsequent-syncs">Subsequent Syncs</a></h2>
+<h2 id="subsequent-syncs"><a class="header" href="#subsequent-syncs">Subsequent Syncs</a></h2>
 <p>If you have a lot of sounds or images on your cards, the first sync may take
 some time, and until it completes, <a href="https://faqs.ankiweb.net/media-files-may-take-time-to-sync.html">sounds and images may fail to
 appear</a>.</p>
@@ -298,8 +270,8 @@ to AnkiMobile, you’d repeat the same process: sync on desktop (or close
 the program, as it syncs automatically on close by default), and then
 tap the sync button on AnkiMobile.</p>
 <p>The sync button will change colour when a normal or full sync is required.</p>
-<h1><a class="header" href="#shared-decks" id="shared-decks">Shared Decks</a></h1>
-<h2><a class="header" href="#from-ankiweb" id="from-ankiweb">From AnkiWeb</a></h2>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="shared-decks"><a class="header" href="#shared-decks">Shared Decks</a></h1>
+<h2 id="from-ankiweb"><a class="header" href="#from-ankiweb">From AnkiWeb</a></h2>
 <p>To download a shared deck directly to your mobile device:</p>
 <ol>
 <li>
@@ -330,14 +302,14 @@ tap the sync button on AnkiMobile.</p>
 <p>When the import completes, your deck should be ready to study.</p>
 </li>
 </ol>
-<h2><a class="header" href="#other-sources" id="other-sources">Other Sources</a></h2>
+<h2 id="other-sources"><a class="header" href="#other-sources">Other Sources</a></h2>
 <p>If you've downloaded a shared deck from another website, or received it in an email
 or messaging app:</p>
 <ol>
 <li>Tap on the file.</li>
 <li>Locate the &quot;Open In&quot; or &quot;Share&quot; icon, and select AnkiMobile from the available options.</li>
 </ol>
-<h1><a class="header" href="#the-deck-list" id="the-deck-list">The Deck List</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="the-deck-list"><a class="header" href="#the-deck-list">The Deck List</a></h1>
 <p>The deck list is the screen you see when you start AnkiMobile. It
 displays a list of your card decks, and provides buttons for performing
 various actions.</p>
@@ -375,9 +347,9 @@ need to be synchronized to AnkiWeb, or if changes are waiting on AnkiWeb
 that need to be synchronized to the device. One of the changes that Anki
 synchronizes to other clients is the current deck, so tapping on a deck
 will change the button color, even if you do not study any cards.</p>
-<h1><a class="header" href="#the-study-screen" id="the-study-screen">The Study Screen</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="the-study-screen"><a class="header" href="#the-study-screen">The Study Screen</a></h1>
 <p>If you have not used Anki on a computer before, please have a look at
-the first <a href="https://docs.ankiweb.net/#/getting-started?id=videos">intro
+the first <a href="https://docs.ankiweb.net/getting-started.html#videos">intro
 video</a> before
 reading on, as it explains the basic review process.</p>
 <p>When you tap on a deck in the deck list, the study screen will load, and
@@ -391,7 +363,7 @@ screen</a>.</p>
 <p>On the bottom of the screen you’ll see three numbers. From the left,
 these correspond to new cards, learning cards, and cards to review.
 These are explained in more detail in the intro videos for the desktop
-program, so please <a href="https://docs.ankiweb.net/#/getting-started?id=videos">check them
+program, so please <a href="https://docs.ankiweb.net/getting-started.html#videos">check them
 out</a> if you
 haven’t already.</p>
 <p>When you’ve looked at a card’s question and remembered the answer, or
@@ -419,7 +391,7 @@ time, whether you have completed the day’s reviews or not.</p>
 Space will show the answer or answer Good, and 1-4 will choose the
 answer buttons. You can also press 'r' to repeat the audio on the
 current card.</p>
-<h1><a class="header" href="#study-tools" id="study-tools">Study Tools</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="study-tools"><a class="header" href="#study-tools">Study Tools</a></h1>
 <p>The tools screen will open when you tap on the gear/cog icon in the
 study screen.</p>
 <p>On the top right, there are buttons that will adjust the text size on
@@ -430,7 +402,7 @@ on a button for a second or so.</p>
 <p>Below the &quot;Frequent Actions&quot; section is a list of all available actions
 in AnkiMobile. You can add these actions to the &quot;Frequent Actions&quot;
 section by long-pressing on them.</p>
-<h2><a class="header" href="#actions" id="actions">Actions</a></h2>
+<h2 id="actions"><a class="header" href="#actions">Actions</a></h2>
 <p>The following actions can be run from the tools screen, or by assigning
 them to a tap, swipe, or the top bar in the preferences.</p>
 <p><strong>Add</strong><br />
@@ -552,20 +524,20 @@ Show the tools screen.</p>
 Makes any buried cards in the current deck ready for review again.</p>
 <p><strong>Undo</strong><br />
 Undoes the last review.</p>
-<h1><a class="header" href="#study-options" id="study-options">Study Options</a></h1>
+<h1 id="study-options"><a class="header" href="#study-options">Study Options</a></h1>
 <p>The study options can be accessed from the tools screen.
 Almost all the options available in the computer version can also be
 adjusted in AnkiMobile. For a description of what everything does,
-please see the <a href="https://apps.ankiweb.net/docs/manual.html#deckoptions">computer
+please see the <a href="https://docs.ankiweb.net/deck-options.html">computer
 documentation</a>.
 While some of the options have different wording, the behaviour is the
 same as the computer version.</p>
-<h1><a class="header" href="#adding--editing" id="adding--editing">Adding &amp; Editing</a></h1>
-<h2><a class="header" href="#adding" id="adding">Adding</a></h2>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="adding--editing"><a class="header" href="#adding--editing">Adding &amp; Editing</a></h1>
+<h2 id="adding"><a class="header" href="#adding">Adding</a></h2>
 <p>To add cards to a deck, tap the &quot;Add&quot; button while reviewing.</p>
 <p>The &quot;Type&quot; button at the top allows you to select the type of note you’d
 like to add. For more information about note types, please see the
-introduction in the <a href="https://apps.ankiweb.net/docs/manual.html#basics">computer version’s
+introduction in the <a href="https://docs.ankiweb.net/getting-started.html#note-types">computer version’s
 manual</a>.</p>
 <p>When you tap on a field, a keyboard will come up, allowing you to type
 in information. You can use the next and previous buttons to move
@@ -593,7 +565,7 @@ Shows a preview of how the card will appear when reviewed.</p>
 Reveals the underlying HTML that fields are comprised of.</p>
 <p>When you’ve typed in the content of a note, hit the save button to add
 it to your collection.</p>
-<h2><a class="header" href="#editing" id="editing">Editing</a></h2>
+<h2 id="editing"><a class="header" href="#editing">Editing</a></h2>
 <p>To edit a note, tap the &quot;Edit&quot; button while reviewing.</p>
 <p>The edit screen is similar to the adding screen mentioned above, with
 some key differences:</p>
@@ -610,7 +582,7 @@ Please see the <a href="study-tools.html#actions">action descriptions</a> for mo
 on what each action does.</p>
 </li>
 </ul>
-<h2><a class="header" href="#browsing" id="browsing">Browsing</a></h2>
+<h2 id="browsing"><a class="header" href="#browsing">Browsing</a></h2>
 <p>You can search or browse your deck by tapping the &quot;Browse&quot; button while
 reviewing.</p>
 <p>The browse screen will show all the cards in the current deck by
@@ -627,7 +599,7 @@ examples:</p>
 <p><code>is:due</code> show only cards that are waiting for review</p>
 <p><code>front:rabbit</code> show only cards where the front field is exactly &quot;rabbit&quot;</p>
 <p>For a full list of the possibilities, please see the section in the
-<a href="https://apps.ankiweb.net/docs/manual.html#searching">desktop manual</a>.</p>
+<a href="https://docs.ankiweb.net/searching.html">desktop manual</a>.</p>
 <p>Tapping the Filter button will reveal a list of filters you can apply,
 like the side bar in the computer version. Tapping on a line will
 replace the current search; you can also swipe on a line to add to the
@@ -636,13 +608,13 @@ existing search instead.</p>
 and right columns, and change the order cards are shown in.</p>
 <p>The Select button allows you to select multiple cards at once, and then
 perform actions on them like changing their deck, or suspending them.</p>
-<h1><a class="header" href="#preferences" id="preferences">Preferences</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="preferences"><a class="header" href="#preferences">Preferences</a></h1>
 <p>The preferences screen can be accessed by tapping on the gear icon at
 the top right of the deck list. It allows you to customize various
 application settings and how AnkiMobile appears.</p>
 <p>The Preferences screen is divided up into different sections, which are
 covered below.</p>
-<h2><a class="header" href="#syncing" id="syncing">Syncing</a></h2>
+<h2 id="syncing"><a class="header" href="#syncing">Syncing</a></h2>
 <p>The syncing screen allows you to customize <a href="syncing.html">cloud synchronization</a> with
 AnkiWeb.</p>
 <p><strong>Sync Sounds &amp; Images</strong><br />
@@ -658,7 +630,7 @@ be given a choice of whether you want to upload your collection or
 download it from AnkiWeb. Please note this option only affects how
 cards, notes and review history is transferred - it does not change how
 sounds and images are synced.</p>
-<h2><a class="header" href="#review" id="review">Review</a></h2>
+<h2 id="review"><a class="header" href="#review">Review</a></h2>
 <p>The review screen allows you to customize how AnkiMobile behaves when
 you’re reviewing cards.</p>
 <p><strong>Feedback Ticks</strong><br />
@@ -682,7 +654,7 @@ when you reveal the answer. If you enable this option, AnkiMobile will
 not zoom out.</p>
 <p><strong>Never Type Answer</strong><br />
 If you have set up your cards to ask you to type in the answer (as
-explained in <a href="https://apps.ankiweb.net/docs/manual.html#templates">this
+explained in <a href="https://docs.ankiweb.net/templates/intro.html">this
 section</a> of the
 desktop manual), AnkiMobile will display a keyboard on such cards and
 allow you to check your answer. If you find typing on a mobile device
@@ -696,7 +668,7 @@ This option ignores a second tap when two taps are made in quick
 succession, so that you don’t accidentally reveal the answer or advance
 to the next card. If you review your cards very quickly, you may wish to
 select a shorter detection time.</p>
-<h3><a class="header" href="#scheduling" id="scheduling">Scheduling</a></h3>
+<h3 id="scheduling"><a class="header" href="#scheduling">Scheduling</a></h3>
 <p>These options affect the way Anki schedules cards in all decks.</p>
 <p><strong>New/Review Order</strong><br />
 Whether Anki should introduce new cards before, after, or together with
@@ -709,14 +681,14 @@ The number of minutes to look ahead when the only cards remaining to
 review with a next repetition time in the future. The default is 20
 minutes, which means cards due to show in 10 minutes will be shown
 immediately if nothing else is available to show.</p>
-<h3><a class="header" href="#notifications" id="notifications">Notifications</a></h3>
+<h3 id="notifications"><a class="header" href="#notifications">Notifications</a></h3>
 <p>When enabled, Anki will display an alert at the selected time of day,
 reminding you to study and telling you how many reviews are waiting.</p>
-<h3><a class="header" href="#top-bar" id="top-bar">Top Bar</a></h3>
+<h3 id="top-bar"><a class="header" href="#top-bar">Top Bar</a></h3>
 <p>You can assign frequently used actions to the top bar for convenient
 access. For an explanation of the available actions, please see the
 <a href="study-tools.html#actions">actions list</a>.</p>
-<h3><a class="header" href="#bottom-bar" id="bottom-bar">Bottom Bar</a></h3>
+<h3 id="bottom-bar"><a class="header" href="#bottom-bar">Bottom Bar</a></h3>
 <p><strong>Show Bottom Bar</strong><br />
 Hides or shows the bottom area that shows the answer buttons and card
 counts.</p>
@@ -727,7 +699,7 @@ being shown.</p>
 Whether to show the answer buttons on the answer side of a card.</p>
 <p><strong>Next Times</strong><br />
 Whether to show the next study time above each of the answer buttons.</p>
-<h3><a class="header" href="#taps" id="taps">Taps</a></h3>
+<h3 id="taps"><a class="header" href="#taps">Taps</a></h3>
 <p>When you’re reviewing, you can tap on different parts of a card in order
 to trigger different actions.</p>
 <p>Anki divides the screen into 9 sections:</p>
@@ -815,7 +787,7 @@ Taps near the middle of the screen will be ignored.</p>
 <p>You can assign frequently used actions to taps for convenient access.
 For an explanation of the available actions, please see the <a href="study-tools.html#actions">actions
 list</a>.</p>
-<h3><a class="header" href="#swipes" id="swipes">Swipes</a></h3>
+<h3 id="swipes"><a class="header" href="#swipes">Swipes</a></h3>
 <p>You can also swipe up, down, left or right across a card to trigger an
 action.</p>
 <p>To ensure swipes don’t interfere with your ability to scroll on a large
@@ -835,7 +807,7 @@ relevant swipe.</p>
 <p>You can assign frequently used actions to swipes for convenient access.
 For an explanation of the available actions, please see the <a href="study-tools.html#actions">actions
 list</a>.</p>
-<h3><a class="header" href="#scratchpad" id="scratchpad">Scratchpad</a></h3>
+<h3 id="scratchpad"><a class="header" href="#scratchpad">Scratchpad</a></h3>
 <p><strong>Ignore Fingers</strong><br />
 When enabled, the scratchpad will only respond to the Apple Pencil.</p>
 <p><strong>Undo Clears All</strong><br />
@@ -843,13 +815,13 @@ Reverses the behaviour of the undo button, so a quick tap clears
 everything, and a long press clears the last stroke.</p>
 <p><strong>Scratchpad Below Buttons</strong><br />
 Whether the scratchpad should be placed above or below the bottom bar.</p>
-<h3><a class="header" href="#auto-advance" id="auto-advance">Auto Advance</a></h3>
+<h3 id="auto-advance"><a class="header" href="#auto-advance">Auto Advance</a></h3>
 <p><strong>Wait for Audio</strong><br />
 Don’t advance until the current audio stops playing.</p>
 <p><strong>Answer Action</strong><br />
 Whether to bury the card, answer it, show a popup reminder, or do
 nothing.</p>
-<h3><a class="header" href="#gamepads" id="gamepads">Gamepads</a></h3>
+<h3 id="gamepads"><a class="header" href="#gamepads">Gamepads</a></h3>
 <p>From AnkiMobile 2.0.53+, you can control the study screen with a game
 controller on iOS 13+. The controller must be supported by iOS, and
 already paired with your iOS device. Please see the following page for
@@ -859,8 +831,8 @@ supported controllers, and how to set them up:</p>
 actions are triggered when each button is pressed. You can assign an
 action to each direction on the d-pad, but the analog thumbpads can not
 be customized - they will always scroll the card up or down.</p>
-<h2><a class="header" href="#general" id="general">General</a></h2>
-<h2><a class="header" href="#theme" id="theme">Theme</a></h2>
+<h2 id="general"><a class="header" href="#general">General</a></h2>
+<h2 id="theme"><a class="header" href="#theme">Theme</a></h2>
 <p>The theme screen allows you to customize the bar colours AnkiMobile
 uses. The available options will depend on whether night mode or iOS
 13’s dark mode is enabled.</p>
@@ -868,14 +840,14 @@ uses. The available options will depend on whether night mode or iOS
 card templates. You can do this using the Card Template action in the
 tools screen, or by using the computer version. For more info, please
 see <a href="http://www.youtube.com/watch?v=F1j1Zx0mXME&amp;yt:cc=on">http://www.youtube.com/watch?v=F1j1Zx0mXME&amp;yt:cc=on</a></p>
-<h2><a class="header" href="#profiles" id="profiles">Profiles</a></h2>
+<h2 id="profiles"><a class="header" href="#profiles">Profiles</a></h2>
 <p>Profiles allow multiple users to study with the same device. You can add
 profiles from the settings screen. To rename or remove a profile, swipe
 to the left on it.</p>
 <p>Each profile needs to be synced with its own AnkiWeb account. Please be
 careful not to sync two profiles with the same AnkiWeb ID, as this could
 lead to data loss.</p>
-<h2><a class="header" href="#backups" id="backups">Backups</a></h2>
+<h2 id="backups"><a class="header" href="#backups">Backups</a></h2>
 <p>AnkiMobile will automatically create backups of your collection for you.
 The backups include all your cards and statistics, but do not include
 sounds or images, since they take up a lot of space.</p>
@@ -914,17 +886,17 @@ apkg from within that profile to confirm that it’s ok. If it is
 corrupt, you can try a previous backup.</p>
 </li>
 </ol>
-<h2><a class="header" href="#check-database" id="check-database">Check Database</a></h2>
+<h2 id="check-database"><a class="header" href="#check-database">Check Database</a></h2>
 <p>This will check your collection for a number of possible errors and fix
 them if possible.</p>
 <p>It also will remove any tags that are no longer used by any cards.</p>
-<h2><a class="header" href="#check-media" id="check-media">Check Media</a></h2>
+<h2 id="check-media"><a class="header" href="#check-media">Check Media</a></h2>
 <p>This scans all your notes for references to sounds and images, and then
 checks to make sure that the sounds and images are available. It will
 display a report letting you know of any sounds or images that are
 missing, and any sounds or images that are not used by any cards. If you
 tap the delete button, the unused sounds or images will be deleted.</p>
-<h1><a class="header" href="#collection-transfer" id="collection-transfer">Collection Transfer</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="collection-transfer"><a class="header" href="#collection-transfer">Collection Transfer</a></h1>
 <p>If you don’t have regular internet access, it’s still possible to copy
 your collection back and forth between devices, though the process is
 not as convenient.</p>
@@ -946,8 +918,8 @@ computer), and then export your collection and import it back into your
 mobile device.</p>
 <p>Exporting individual decks is not currently possible, but is planned
 for the future.</p>
-<h2><a class="header" href="#computer-to-iphoneipad-1" id="computer-to-iphoneipad-1">Computer to iPhone/iPad</a></h2>
-<h3><a class="header" href="#export-the-file" id="export-the-file">Export the File</a></h3>
+<h2 id="computer-to-iphoneipad-1"><a class="header" href="#computer-to-iphoneipad-1">Computer to iPhone/iPad</a></h2>
+<h3 id="export-the-file"><a class="header" href="#export-the-file">Export the File</a></h3>
 <p>On your computer:</p>
 <ol>
 <li>
@@ -968,7 +940,7 @@ is called <code>collection.apkg</code>, that will work - your Anki version
 is just old.</p>
 </li>
 </ol>
-<h3><a class="header" href="#transfer-the-file" id="transfer-the-file">Transfer the File</a></h3>
+<h3 id="transfer-the-file"><a class="header" href="#transfer-the-file">Transfer the File</a></h3>
 <p>If your devices are on the same wifi network and signed in to iCloud, you can
 use the AirDrop option in Finder to
 <a href="https://support.apple.com/en-au/HT204144">AirDrop</a> the <code>collection.colpkg</code> file
@@ -977,7 +949,7 @@ to your mobile device.</p>
 <a href="https://support.apple.com/en-us/HT210598">Finder</a> or
 <a href="http://support.apple.com/kb/HT4094">iTunes</a> to drop the .colpkg file into
 Anki's file sharing area.</p>
-<h3><a class="header" href="#import-the-file" id="import-the-file">Import the File</a></h3>
+<h3 id="import-the-file"><a class="header" href="#import-the-file">Import the File</a></h3>
 <p>If you AirDropped the file, AnkiMobile should have automatically
 popped up and imported the file when you accepted it.</p>
 <p>If you transferred the file via iOS file sharing, go to AnkiMobile's
@@ -1001,10 +973,10 @@ decks from your desktop.</p>
 copying any sounds or images if they already exist on your mobile
 device, and are the same file size. This will make imports after the
 first one considerably faster if you have a lot of media files.</p>
-<h2><a class="header" href="#iphoneipad-to-computer-1" id="iphoneipad-to-computer-1">iPhone/iPad to Computer</a></h2>
+<h2 id="iphoneipad-to-computer-1"><a class="header" href="#iphoneipad-to-computer-1">iPhone/iPad to Computer</a></h2>
 <p>On AnkiMobile, tap the <strong>Add/Export</strong> button on the bottom left of
 the decks list.</p>
-<h3><a class="header" href="#airdrop" id="airdrop">AirDrop</a></h3>
+<h3 id="airdrop"><a class="header" href="#airdrop">AirDrop</a></h3>
 <ol>
 <li>Choose <strong>Export to Share</strong>, and then choose <strong>AirDrop</strong>.</li>
 <li>Select your computer. If your computer doesn't appear, make
@@ -1012,7 +984,7 @@ sure you have AirDrop open on your computer.</li>
 <li>Once the file has arrived on your computer, use <strong>File&gt;Import</strong>
 inside Anki to import the file.</li>
 </ol>
-<h3><a class="header" href="#finderitunes" id="finderitunes">Finder/iTunes</a></h3>
+<h3 id="finderitunes"><a class="header" href="#finderitunes">Finder/iTunes</a></h3>
 <ol>
 <li>Choose <strong>Export to iTunes</strong>, and tap <strong>Export</strong>.</li>
 </ol>
@@ -1040,9 +1012,9 @@ desktop.</p>
 wish.</p>
 </li>
 </ol>
-<h1><a class="header" href="#text-to-speech" id="text-to-speech">Text to Speech</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="text-to-speech"><a class="header" href="#text-to-speech">Text to Speech</a></h1>
 <p>AnkiMobile 2.0.56+ supports using TTS tags in card templates. Please see
-<a href="https://docs.ankiweb.net/#/templates/fields?id=text-to-speech">the computer
+<a href="https://docs.ankiweb.net/templates/fields.html#text-to-speech">the computer
 manual</a> for
 more information.</p>
 <p>To get the best quality sound, please go to the iOS Settings app, then:</p>
@@ -1073,7 +1045,7 @@ add voices for other languages, tap on &quot;Rotor Languages&quot;, and after
 selecting another language, you will have a chance to download voices.</p>
 <p>Like regular audio, text to speech will not play automatically when your
 device’s mute/vibrate switch is enabled.</p>
-<h1><a class="header" href="#mathjax" id="mathjax">MathJax</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="mathjax"><a class="header" href="#mathjax">MathJax</a></h1>
 <p>MathJax allows you to easily add mathematical equations to your cards.</p>
 <p>AnkiMobile supports MathJax out of the box. Simply place something like
 the following on your card:</p>
@@ -1083,10 +1055,10 @@ An equation block:
 
 \[\sqrt{-1}\]
 </code></pre>
-<p>More information is available in the <a href="https://docs.ankiweb.net/#/math">computer manual</a>.</p>
-<h1><a class="header" href="#custom-fonts" id="custom-fonts">Custom Fonts</a></h1>
+<p>More information is available in the <a href="https://docs.ankiweb.net/math.html#mathjax">computer manual</a>.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="custom-fonts"><a class="header" href="#custom-fonts">Custom Fonts</a></h1>
 <p>AnkiMobile allows you to use non-system fonts on your cards. To set them
-up, the desktop client is required. Please see <a href="https://docs.ankiweb.net/#/templates/styling?id=installing-fonts">the section in the
+up, the desktop client is required. Please see <a href="https://docs.ankiweb.net/templates/styling.html#installing-fonts">the section in the
 desktop
 manual</a> for
 more information.</p>
@@ -1098,7 +1070,7 @@ installing a font, you may have exceeded your device’s memory limits.</p>
 embedded - this may be a limitation imposed by the system web libraries.
 If you need access to lots of fonts, you may want to look at installing
 the fonts into iOS instead.</p>
-<h1><a class="header" href="#night-mode-styling" id="night-mode-styling">Night Mode Styling</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="night-mode-styling"><a class="header" href="#night-mode-styling">Night Mode Styling</a></h1>
 <p>By using the Edit Card Template action, it is possible to customize how
 cards appear when night mode/dark mode is enabled.</p>
 <p>If you wanted a grey background instead of black, you could use
@@ -1113,10 +1085,10 @@ yellow when night mode is enabled:</p>
   color: yellow;
 }
 </code></pre>
-<h1><a class="header" href="#url-schemes" id="url-schemes">URL Schemes</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="url-schemes"><a class="header" href="#url-schemes">URL Schemes</a></h1>
 <p>AnkiMobile supports URL schemes for opening third party dictionaries,
 and for adding content to AnkiMobile from other applications.</p>
-<h2><a class="header" href="#ankimobiles-url-scheme" id="ankimobiles-url-scheme">AnkiMobile’s URL Scheme</a></h2>
+<h2 id="ankimobiles-url-scheme"><a class="header" href="#ankimobiles-url-scheme">AnkiMobile’s URL Scheme</a></h2>
 <p>A 'URL Scheme' is like a link to a website, but it instead links to an
 app. A simple example is:</p>
 <pre><code>anki://
@@ -1179,12 +1151,12 @@ argument with the extension at the end, eg
 escape the URL before including it in the URL scheme, as otherwise ? and
 &amp; characters will be interpreted as part of the URL scheme instead of
 the URL.</p>
-<h2><a class="header" href="#dictionary-links" id="dictionary-links">Dictionary Links</a></h2>
+<h2 id="dictionary-links"><a class="header" href="#dictionary-links">Dictionary Links</a></h2>
 <p>The desktop version of Anki provides the ability to open a web page
 based on the contents of a field, for easily creating a link to an
-online dictionary site. This is documented <a href="https://apps.ankiweb.net/docs/manual.html#_dictionary_links">in this
+online dictionary site. This is documented <a href="https://docs.ankiweb.net/templates/fields.html#dictionary-links">in this
 section</a> of
-the manual, though please start from the <a href="https://apps.ankiweb.net/docs/manual.html#templates">cards &amp;
+the manual, though please start from the <a href="https://docs.ankiweb.net/templates/intro.html">cards &amp;
 templates</a> section
 as the above link assumes you have read it.</p>
 <p>Like the desktop, AnkiMobile supports links to dictionary websites. In
@@ -1220,7 +1192,7 @@ and manually return to AnkiMobile.</p>
 <p>Some dictionary apps publish their URL scheme in their documentation. If
 you’re using a dictionary app that doesn’t, please contact the authors
 and ask them for more information.</p>
-<h1><a class="header" href="#installing-ankimobile-on-multiple-devices" id="installing-ankimobile-on-multiple-devices">Installing AnkiMobile on multiple devices</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="installing-ankimobile-on-multiple-devices"><a class="header" href="#installing-ankimobile-on-multiple-devices">Installing AnkiMobile on multiple devices</a></h1>
 <p>Once purchased, you can use AnkiMobile on multiple devices you own without having to pay again.</p>
 <p>To do so, make sure the device is using the same Apple ID as you made the original purchase with, or is enrolled in <a href="https://support.apple.com/en-au/HT201060">family sharing</a>.</p>
 <ul>
@@ -1232,19 +1204,19 @@ and ask them for more information.</p>
 <li>When you've located AnkiMobile, tap on the cloud icon to download it.</li>
 </ul>
 <p>If you're on an older version of iOS, or the purchase is not appearing, you can attempt to purchase the app again. Provided you make the purchase with the same Apple ID as the original purchase or family sharing is correctly set up, after you attempt to purchase the app, you should receive a message saying the download is free.</p>
-<h2><a class="header" href="#account-troubles" id="account-troubles">Account troubles</a></h2>
+<h2 id="account-troubles"><a class="header" href="#account-troubles">Account troubles</a></h2>
 <p>Apple do not provide us with any access to their systems, so we do not have the ability to help you recover an old account, or confirm a previous purchase you have made. If you have any trouble with the purchase or download process, please give Apple a call:</p>
 <p><a href="http://support.apple.com">http://support.apple.com</a></p>
-<h1><a class="header" href="#ankimobile-beta-testing" id="ankimobile-beta-testing">AnkiMobile beta testing</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="ankimobile-beta-testing"><a class="header" href="#ankimobile-beta-testing">AnkiMobile beta testing</a></h1>
 <p>Any existing AnkiMobile user that syncs with AnkiWeb is welcome to become a beta tester - please just post a <a href="https://anki.tenderapp.com/discussions/private">private ticket</a> requesting an invite. If you sync AnkiMobile with a different AnkiWeb ID, please include your AnkiWeb ID in the message as well.</p>
 <p>Switching between beta versions and stable versions will preserve any cards you have on your device. But just to be safe, please sync any changes you've made to AnkiWeb before switching versions.</p>
 <p>Once you've received an invite, please accept it and install the TestFlight app from the app store. Using the TestFlight app, you can download the latest beta. As new beta versions are released, you will receive a notification, and can upgrade as you please.</p>
 <p>If you would like to revert to the store version, you can go to AnkiMobile's app store page and tap on the cloud icon. Once you switch back to the store version, you will receive normal app updates as you did before.</p>
 <p>If you no longer wish to beta test and do not want to receive further notifications, you can remove yourself using the TestFlight app.</p>
 <p>If you experience any issues with the betas, please either post a <a href="https://anki.tenderapp.com/discussions/private">private ticket</a>, or post on the <a href="https://forums.ankiweb.net/c/beta-testing/13">Beta Testing section</a> of the forums.</p>
-<h1><a class="header" href="#more-features" id="more-features">More Features</a></h1>
-<h2><a class="header" href="#javascript" id="javascript">Javascript</a></h2>
-<p>The <a href="https://docs.ankiweb.net/#/templates/styling?id=javascript">warnings</a>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="more-features"><a class="header" href="#more-features">More Features</a></h1>
+<h2 id="javascript"><a class="header" href="#javascript">Javascript</a></h2>
+<p>The <a href="https://docs.ankiweb.net/templates/styling.html#javascript">warnings</a>
 that apply to the computer version also apply to AnkiMobile.</p>
 <p>In addition to the above, another thing to be aware of in AnkiMobile is
 that your code also needs to play nicely with AnkiMobile’s tap
@@ -1253,10 +1225,10 @@ handler should work as you expect.</p>
 <p>If you have other elements that must receive tap events, give them the
 class 'tappable' to tell AnkiMobile 2.0.39 or later that it should pass
 taps through to the element.</p>
-<h2><a class="header" href="#play-buttons" id="play-buttons">Play Buttons</a></h2>
+<h2 id="play-buttons"><a class="header" href="#play-buttons">Play Buttons</a></h2>
 <p>To change the styling of the audio replay buttons, please see
-<a href="https://docs.ankiweb.net/#/templates/styling?id=audio-replay-buttons">https://docs.ankiweb.net/#/templates/styling?id=audio-replay-buttons</a></p>
-<h2><a class="header" href="#image-resizing" id="image-resizing">Image Resizing</a></h2>
+<a href="https://docs.ankiweb.net/templates/styling.html#audio-replay-buttons">https://docs.ankiweb.net/templates/styling.html#audio-replay-buttons</a></p>
+<h2 id="image-resizing"><a class="header" href="#image-resizing">Image Resizing</a></h2>
 <p>When you attach an image from the photo gallery it is automatically
 resized to have a maximum length of 1024 along its longest edge.</p>
 <p>Recent Anki versions allow you to customize this limit in the <strong>Preferences &gt;
@@ -1266,59 +1238,31 @@ General</strong> screen.</p>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                        
-
-                        
-
                         <div style="clear: both"></div>
                     </nav>
                 </div>
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                
-
-                
             </nav>
 
         </div>
 
-        
-
-        
-
-        
-
-        
         <script type="text/javascript">
             window.playground_copyable = true;
         </script>
-        
-
-        
-
-        
         <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
         <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
         <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
-        
-
         <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
         <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
         <script src="book.js" type="text/javascript" charset="utf-8"></script>
 
         <!-- Custom JS scripts -->
-        
-
-        
-        
         <script type="text/javascript">
         window.addEventListener('load', function() {
             window.setTimeout(window.print, 100);
         });
         </script>
-        
-        
-
     </body>
 </html>

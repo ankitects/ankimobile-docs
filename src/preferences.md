@@ -265,12 +265,12 @@ nothing.
 
 ### Gamepads
 
-From AnkiMobile 2.0.53+, you can control the study screen with a game
-controller on iOS 13+. The controller must be supported by iOS, and
-already paired with your iOS device. Please see the following page for
-supported controllers, and how to set them up:
-
-<https://support.apple.com/en-au/HT210414>
+From AnkiMobile 2.0.53+, you can control the study screen with a game controller
+on iOS 13+. The controller must be suppored by iOS, and must provide an
+[extended controller
+profile](https://developer.apple.com/documentation/gamecontroller/gcextendedgamepad).
+Controllers with fewer buttons can not currently be used. For more information
+on setup, please see [this page](https://support.apple.com/en-au/HT210414).
 
 The gamepads section of the preferences allows you to configure which
 actions are triggered when each button is pressed. You can assign an
@@ -316,9 +316,8 @@ and tap on the backup you wish to restore to.
 
 It is also possible to customize the frequency and amount of backups
 that are created, via the settings at the top of the backups section.
-You can change 15 to a different number to adjust the number of backups
-
-- set it to zero to disable backups completely.
+You can change 15 to a different number to adjust the number of backups.
+Set it to zero to disable backups completely.
 
 If you’re unable to get AnkiMobile to start due to a serious error, you
 can still retrieve the backups from the iTunes file sharing area:

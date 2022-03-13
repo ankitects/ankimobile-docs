@@ -20,20 +20,22 @@ Workflow.
 
 The scheme to add cards looks like this:
 
-    anki://x-callback-url/addnote?profile=User 1&type=Basic&deck=Default&fldFront=front text&fldBack=back text
+    anki://x-callback-url/addnote?profile=User%201&type=Basic&deck=Default&fldFront=front%20text&fldBack=back%20text
 
 The first part must always be there:
 
-anki://x-callback-url/addnote?
+    anki://x-callback-url/addnote?
 
 After the first part, keys and values are separated by an ampersand. The
 following keys must always be provided:
 
-- profile=&lt;profile name&gt;
+- `profile=<profile name>`
 
-- type=&lt;note type name&gt;
+- `type=<note type name>`
 
-- deck=&lt;deck name&gt;
+- `deck=<deck name>`
+    - Separate nested decks with `::` 
+      - `deck=<deck name>::<sub deck name>`
 
 Fields are entered by prefixing their name with "fld". So if your first
 field is called "Text", the key would be "fldText". The field text is
@@ -47,12 +49,12 @@ useful.
 
 The remaining keys are optional:
 
-- tags=&lt;tags separated by space&gt;
+- `tags=<tags separated by space>`
 
-- dupes=1 - if provided, allow a note to be added even if the same
+- `dupes=1` - if provided, allow a note to be added even if the same
   content is on an existing note.
 
-- x-success=&lt;url scheme for another app&gt; - use to automatically
+- `x-success=<url scheme for another app>` - use to automatically
   return to another app after the note is added.
 
 If a field you provide is a link to an image or audio file, AnkiMobile

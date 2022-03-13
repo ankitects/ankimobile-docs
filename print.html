@@ -1099,21 +1099,29 @@ to your collection. This can be used with dictionary apps that support
 calling other apps via URL schemes, and with automation apps like
 Workflow.</p>
 <p>The scheme to add cards looks like this:</p>
-<pre><code>anki://x-callback-url/addnote?profile=User 1&amp;type=Basic&amp;deck=Default&amp;fldFront=front text&amp;fldBack=back text
+<pre><code>anki://x-callback-url/addnote?profile=User%201&amp;type=Basic&amp;deck=Default&amp;fldFront=front%20text&amp;fldBack=back%20text
 </code></pre>
 <p>The first part must always be there:</p>
-<p>anki://x-callback-url/addnote?</p>
+<pre><code>anki://x-callback-url/addnote?
+</code></pre>
 <p>After the first part, keys and values are separated by an ampersand. The
 following keys must always be provided:</p>
 <ul>
 <li>
-<p>profile=&lt;profile name&gt;</p>
+<p><code>profile=&lt;profile name&gt;</code></p>
 </li>
 <li>
-<p>type=&lt;note type name&gt;</p>
+<p><code>type=&lt;note type name&gt;</code></p>
 </li>
 <li>
-<p>deck=&lt;deck name&gt;</p>
+<p><code>deck=&lt;deck name&gt;</code></p>
+<ul>
+<li>Separate nested decks with <code>::</code> 
+<ul>
+<li><code>deck=&lt;deck name&gt;::&lt;sub deck name&gt;</code></li>
+</ul>
+</li>
+</ul>
 </li>
 </ul>
 <p>Fields are entered by prefixing their name with &quot;fld&quot;. So if your first
@@ -1127,14 +1135,14 @@ useful.</p>
 <p>The remaining keys are optional:</p>
 <ul>
 <li>
-<p>tags=&lt;tags separated by space&gt;</p>
+<p><code>tags=&lt;tags separated by space&gt;</code></p>
 </li>
 <li>
-<p>dupes=1 - if provided, allow a note to be added even if the same
+<p><code>dupes=1</code> - if provided, allow a note to be added even if the same
 content is on an existing note.</p>
 </li>
 <li>
-<p>x-success=&lt;url scheme for another app&gt; - use to automatically
+<p><code>x-success=&lt;url scheme for another app&gt;</code> - use to automatically
 return to another app after the note is added.</p>
 </li>
 </ul>

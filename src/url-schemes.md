@@ -3,7 +3,9 @@
 AnkiMobile supports URL schemes for opening third party dictionaries,
 and for adding content to AnkiMobile from other applications.
 
-## AnkiMobile’s URL Scheme
+## AnkiMobile’s URL Schemes
+
+### Adding Notes
 
 A 'URL Scheme' is like a link to a website, but it instead links to an
 app. A simple example is:
@@ -29,13 +31,11 @@ The first part must always be there:
 After the first part, keys and values are separated by an ampersand. The
 following keys must always be provided:
 
-- `profile=<profile name>`
-
 - `type=<note type name>`
 
 - `deck=<deck name>`
-    - Separate nested decks with `::` 
-      - `deck=<deck name>::<sub deck name>`
+  - Separate nested decks with `::`
+    - `deck=<deck name>::<sub deck name>`
 
 Fields are entered by prefixing their name with "fld". So if your first
 field is called "Text", the key would be "fldText". The field text is
@@ -48,6 +48,10 @@ the Shortcuts app, there is a URL encode action which you may find
 useful.
 
 The remaining keys are optional:
+
+- `profile=<profile name>`
+
+If provided, adding will fail if the provided profile is not currently active.
 
 - `tags=<tags separated by space>`
 
@@ -70,6 +74,28 @@ argument with the extension at the end, eg
 escape the URL before including it in the URL scheme, as otherwise ? and
 & characters will be interpreted as part of the URL scheme instead of
 the URL.
+
+### Info for Adding
+
+There is a separate URL scheme that third-party apps can use to get your profile, deck
+and notetype names, so that they can be presented to you in a friendly manner.
+
+The app should invoke the following URL:
+
+`anki://x-callback-url/infoForAdding?x-success=...`
+
+If the user authorises the request, the requested data will be available on the clipboard,
+and can be retrieved using the following. You should clear the clipboard after retrieving
+the data.
+
+```swift
+let PASTEBOARD_TYPE = "net.ankimobile.json"
+if let data = UIPasteboard.general.data(forPasteboardType: PASTEBOARD_TYPE) {
+   // clear clipboard
+   UIPasteboard.general.setData(Data(), forPasteboardType: PASTEBOARD_TYPE)
+   // ... handle json
+}
+```
 
 ## Dictionary Links
 

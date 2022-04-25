@@ -150,6 +150,10 @@ will depend on how hard you press.
 **Scratchpad Size**  
 Alters the size of the scratchpad window.
 
+**Scroll Up**  
+**Scroll Down**  
+When card content larger than one screen, scrolls up or down. Useful when using a gamepad without an analog control stick.
+
 **Set Due Date**  
 Make the card a review card if it is not already one, and make it due in
 the number of days you specify. If you choose 0 days, the card will be

@@ -502,6 +502,9 @@ pressure sensitivity (iPhone 6S, iPad w/ Apple Pencil), the stroke width
 will depend on how hard you press.</p>
 <p><strong>Scratchpad Size</strong><br />
 Alters the size of the scratchpad window.</p>
+<p><strong>Scroll Up</strong><br />
+<strong>Scroll Down</strong><br />
+When card content larger than one screen, scrolls up or down. Useful when using a gamepad without an analog control stick.</p>
 <p><strong>Set Due Date</strong><br />
 Make the card a review card if it is not already one, and make it due in
 the number of days you specify. If you choose 0 days, the card will be
@@ -1087,7 +1090,8 @@ yellow when night mode is enabled:</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="url-schemes"><a class="header" href="#url-schemes">URL Schemes</a></h1>
 <p>AnkiMobile supports URL schemes for opening third party dictionaries,
 and for adding content to AnkiMobile from other applications.</p>
-<h2 id="ankimobiles-url-scheme"><a class="header" href="#ankimobiles-url-scheme">AnkiMobile’s URL Scheme</a></h2>
+<h2 id="ankimobiles-url-schemes"><a class="header" href="#ankimobiles-url-schemes">AnkiMobile’s URL Schemes</a></h2>
+<h3 id="adding-notes"><a class="header" href="#adding-notes">Adding Notes</a></h3>
 <p>A 'URL Scheme' is like a link to a website, but it instead links to an
 app. A simple example is:</p>
 <pre><code>anki://
@@ -1108,15 +1112,12 @@ Workflow.</p>
 following keys must always be provided:</p>
 <ul>
 <li>
-<p><code>profile=&lt;profile name&gt;</code></p>
-</li>
-<li>
 <p><code>type=&lt;note type name&gt;</code></p>
 </li>
 <li>
 <p><code>deck=&lt;deck name&gt;</code></p>
 <ul>
-<li>Separate nested decks with <code>::</code> 
+<li>Separate nested decks with <code>::</code>
 <ul>
 <li><code>deck=&lt;deck name&gt;::&lt;sub deck name&gt;</code></li>
 </ul>
@@ -1133,6 +1134,10 @@ spaces in a field, they must be represented with <code>%20</code>. If you’re u
 the Shortcuts app, there is a URL encode action which you may find
 useful.</p>
 <p>The remaining keys are optional:</p>
+<ul>
+<li><code>profile=&lt;profile name&gt;</code></li>
+</ul>
+<p>If provided, adding will fail if the provided profile is not currently active.</p>
 <ul>
 <li>
 <p><code>tags=&lt;tags separated by space&gt;</code></p>
@@ -1158,6 +1163,21 @@ argument with the extension at the end, eg
 escape the URL before including it in the URL scheme, as otherwise ? and
 &amp; characters will be interpreted as part of the URL scheme instead of
 the URL.</p>
+<h3 id="info-for-adding"><a class="header" href="#info-for-adding">Info for Adding</a></h3>
+<p>There is a separate URL scheme that third-party apps can use to get your profile, deck
+and notetype names, so that they can be presented to you in a friendly manner.</p>
+<p>The app should invoke the following URL:</p>
+<p><code>anki://x-callback-url/infoForAdding?x-success=...</code></p>
+<p>If the user authorises the request, the requested data will be available on the clipboard,
+and can be retrieved using the following. You should clear the clipboard after retrieving
+the data.</p>
+<pre><code class="language-swift">let PASTEBOARD_TYPE = &quot;net.ankimobile.json&quot;
+if let data = UIPasteboard.general.data(forPasteboardType: PASTEBOARD_TYPE) {
+   // clear clipboard
+   UIPasteboard.general.setData(Data(), forPasteboardType: PASTEBOARD_TYPE)
+   // ... handle json
+}
+</code></pre>
 <h2 id="dictionary-links"><a class="header" href="#dictionary-links">Dictionary Links</a></h2>
 <p>The desktop version of Anki provides the ability to open a web page
 based on the contents of a field, for easily creating a link to an

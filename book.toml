@@ -12,6 +12,10 @@ create-missing = true
 #no-section-label = true
 git-repository-url = "https://github.com/ankitects/ankimobile-docs/"
 
+[preprocessor.toc]
+command = "mdbook-toc"
+renderer = ["html"]
+
 [output.linkcheck]
 optional = true
 warning-policy = "warn"

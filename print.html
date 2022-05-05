@@ -202,6 +202,14 @@ it easy to keep your card decks in sync between mobile devices and your
 computer. If you are an existing Anki user with cards on your computer,
 syncing is the easiest way to start using those cards on your mobile device
 as well.</p>
+<ul>
+<li><a href="syncing.html#intro-videos">Intro Videos</a></li>
+<li><a href="syncing.html#creating-an-account">Creating an Account</a></li>
+<li><a href="syncing.html#computer-to-iphoneipad">Computer to iPhone/iPad</a></li>
+<li><a href="syncing.html#iphoneipad-to-computer">iPhone/iPad to Computer</a></li>
+<li><a href="syncing.html#subsequent-syncs">Subsequent Syncs</a></li>
+<li><a href="syncing.html#missing-images">Missing Images</a></li>
+</ul>
 <h2 id="intro-videos"><a class="header" href="#intro-videos">Intro Videos</a></h2>
 <p>Please check out these short videos that explain syncing:</p>
 <ul>
@@ -270,6 +278,28 @@ to AnkiMobile, you’d repeat the same process: sync on desktop (or close
 the program, as it syncs automatically on close by default), and then
 tap the sync button on AnkiMobile.</p>
 <p>The sync button will change colour when a normal or full sync is required.</p>
+<h2 id="missing-images"><a class="header" href="#missing-images">Missing Images</a></h2>
+<p>If you receive a message about an image being missing, the most common cause
+is because <a href="https://faqs.ankiweb.net/media-files-may-take-time-to-sync.html">media has not finished syncing yet</a>. Please follow the steps on that page
+to confirm that all of your Anki clients have finished syncing media. Remember
+that if you've added images on your computer, you'll need to confirm the computer
+has finished syncing first, and then check AnkiMobile.</p>
+<p>If you have confirmed media has finished syncing, but still receive a message
+about a missing image, then it is possible that the author of the shared deck
+you are using has accidentally or deliberately failed to include one or more
+images.</p>
+<p>If you're able to contact the deck author, it may be worth notifying them of the
+issue, as they may be able to provide you with the missing image in a deck update.
+If you're unable to reach them, and want to make the warning go away, please read on.</p>
+<p>If you open the Edit screen and see a broken image icon, one of the images
+on that card is missing. You can delete the image icon to make the warning go away.</p>
+<p>If you see a warning about the same image name on every card, it means that the
+deck author has added an image to the &quot;Card Template&quot;, which is shared by multiple
+cards. You can make the message go away by tapping on the gear/cog in the bottom right
+of the review screen, then scrolling down to &quot;Card Template&quot;. In the screen that follows,
+search for the image name in both the Front and Back of the card - it will look something
+like <code>&lt;img src=&quot;myimage.jpg&quot;&gt;</code>. Remove the text starting with <code>&lt;img</code> and ending with <code>&gt;</code>,
+and it should resolve the problem.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="shared-decks"><a class="header" href="#shared-decks">Shared Decks</a></h1>
 <h2 id="from-ankiweb"><a class="header" href="#from-ankiweb">From AnkiWeb</a></h2>
 <p>To download a shared deck directly to your mobile device:</p>

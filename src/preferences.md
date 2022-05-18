@@ -306,18 +306,8 @@ AnkiMobile will automatically create backups of your collection for you.
 The backups include all your cards and statistics, but do not include
 sounds or images, since they take up a lot of space.
 
-The backup is taken in the background when you return to your device’s
-home screen, or switch to another app. A backup will only happen if more
-than an hour has elapsed since the last time a backup was created.
-AnkiMobile will store the last 15 backups.
-
 To restore from a backup, open the Backups section in the preferences,
 and tap on the backup you wish to restore to.
-
-It is also possible to customize the frequency and amount of backups
-that are created, via the settings at the top of the backups section.
-You can change 15 to a different number to adjust the number of backups.
-Set it to zero to disable backups completely.
 
 If you’re unable to get AnkiMobile to start due to a serious error, you
 can still retrieve the backups from the iTunes file sharing area:
@@ -329,12 +319,13 @@ can still retrieve the backups from the iTunes file sharing area:
 3.  Locate Anki’s file sharing section with [Apple’s
     instructions](http://support.apple.com/kb/HT4094).
 
-4.  Drag the your backup files from iTunes to your desktop.
+4.  Drag the your backup folder from iTunes to your desktop.
 
 5.  With the computer version of Anki, create a new, empty profile via
     File&gt;Switch Profile, and then File&gt;Import the latest backup
-    apkg from within that profile to confirm that it’s ok. If it is
-    corrupt, you can try a previous backup.
+    colpkg from within that profile to confirm that it’s ok. If it is
+    corrupt, you can try a previous backup. You'll need Anki 2.1.50+ to
+    open the backups.
 
 ## Check Database
 

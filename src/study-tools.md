@@ -185,6 +185,17 @@ Makes any buried cards in the current deck ready for review again.
 **Undo**  
 Undoes the last review.
 
+**User Action 1-8**
+
+From 2.0.88+. Allows you to trigger JavaScript in the review screen, so that
+you can do things like reveal a hint using a game controller. For example,
+if your card template provides a `revealNext()` function, you can assign that
+to User Action 1 with the following code:
+
+```
+var userJs1 = revealNext;
+```
+
 # Study Options
 
 The study options can be accessed from the tools screen.

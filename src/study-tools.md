@@ -187,14 +187,26 @@ Undoes the last review.
 
 **User Action 1-8**
 
-From 2.0.88+. Allows you to trigger JavaScript in the review screen, so that
-you can do things like reveal a hint using a game controller. For example,
-if your card template provides a `revealNext()` function, you can assign that
-to User Action 1 with the following code:
+From 2.0.88+. An advanced feature that allows you to trigger JavaScript in the review
+screen.
+
+Some shared decks provide keyboard shortcuts to perform actions like revealing a hint,
+or revealing the next cloze deletion. If that action is available as a public function,
+you can tell AnkiMobile to call it when a user action is triggered. This makes it possible
+to trigger the action with your gamepad instead.
+
+To define a user action, you must know the function the card template provides. If you
+know it provides a `revealNext()` function for example, you can tell AnkiMobile to call
+it with the following code:
 
 ```
 var userJs1 = revealNext;
 ```
+
+Please note that standard Anki templates do not provide any actions - this feature
+is only useful for triggering actions you have written yourself, and ones that certain
+shared decks provide.
+
 
 # Study Options
 

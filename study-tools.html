@@ -277,12 +277,20 @@ Makes any buried cards in the current deck ready for review again.</p>
 <p><strong>Undo</strong><br />
 Undoes the last review.</p>
 <p><strong>User Action 1-8</strong></p>
-<p>From 2.0.88+. Allows you to trigger JavaScript in the review screen, so that
-you can do things like reveal a hint using a game controller. For example,
-if your card template provides a <code>revealNext()</code> function, you can assign that
-to User Action 1 with the following code:</p>
+<p>From 2.0.88+. An advanced feature that allows you to trigger JavaScript in the review
+screen.</p>
+<p>Some shared decks provide keyboard shortcuts to perform actions like revealing a hint,
+or revealing the next cloze deletion. If that action is available as a public function,
+you can tell AnkiMobile to call it when a user action is triggered. This makes it possible
+to trigger the action with your gamepad instead.</p>
+<p>To define a user action, you must know the function the card template provides. If you
+know it provides a <code>revealNext()</code> function for example, you can tell AnkiMobile to call
+it with the following code:</p>
 <pre><code>var userJs1 = revealNext;
 </code></pre>
+<p>Please note that standard Anki templates do not provide any actions - this feature
+is only useful for triggering actions you have written yourself, and ones that certain
+shared decks provide.</p>
 <h1 id="study-options"><a class="header" href="#study-options">Study Options</a></h1>
 <p>The study options can be accessed from the tools screen.
 Almost all the options available in the computer version can also be

@@ -97,6 +97,19 @@ if let data = UIPasteboard.general.data(forPasteboardType: PASTEBOARD_TYPE) {
 }
 ```
 
+### Search
+
+From AnkiMobile 2.0.90+. Allows you to open the search string with the provided
+search.
+
+`anki://x-callback-url/search?query=...`
+
+### Sync
+
+From AnkiMobile 2.0.90+. Performs the same action as tapping on the Sync button.
+
+`anki://x-callback-url/sync`
+
 ## Dictionary Links
 
 The desktop version of Anki provides the ability to open a web page

@@ -188,7 +188,8 @@ Undoes the last review.
 **User Action 1-8**
 
 From 2.0.88+. An advanced feature that allows you to trigger JavaScript in the review
-screen.
+screen. Please note we can not provide any assistance with using this feature, as it uses
+[JavaScript](https://docs.ankiweb.net/templates/styling.html#javascript).
 
 Some shared decks provide keyboard shortcuts to perform actions like revealing a hint,
 or revealing the next cloze deletion. If that action is available as a public function,
@@ -203,9 +204,12 @@ it with the following code:
 var userJs1 = revealNext;
 ```
 
+The author of the shared deck or template may be able to tell you if a function is
+available.
+
 Please note that standard Anki templates do not provide any actions - this feature
 is only useful for triggering actions you have written yourself, and ones that certain
-shared decks provide.
+shared decks/templates provide.
 
 
 # Study Options

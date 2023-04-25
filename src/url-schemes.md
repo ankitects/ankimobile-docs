@@ -114,10 +114,8 @@ From AnkiMobile 2.0.90+. Performs the same action as tapping on the Sync button.
 
 The desktop version of Anki provides the ability to open a web page
 based on the contents of a field, for easily creating a link to an
-online dictionary site. This is documented [in this
-section](https://docs.ankiweb.net/templates/fields.html#dictionary-links) of
-the manual, though please start from the [cards &
-templates](https://docs.ankiweb.net/templates/intro.html) section
+online dictionary site. This is documented [in this section](https://docs.ankiweb.net/templates/fields.html#dictionary-links) of
+the manual, though please start from the [cards & templates](https://docs.ankiweb.net/templates/intro.html) section
 as the above link assumes you have read it.
 
 Like the desktop, AnkiMobile supports links to dictionary websites. In

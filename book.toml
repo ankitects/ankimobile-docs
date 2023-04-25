@@ -9,7 +9,7 @@ title = "AnkiMobile Manual"
 create-missing = true
 
 [output.html]
-#no-section-label = true
+# no-section-label = true
 git-repository-url = "https://github.com/ankitects/ankimobile-docs/"
 
 [preprocessor.toc]

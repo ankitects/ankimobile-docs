@@ -6,8 +6,7 @@ To add cards to a deck, tap the "Add" button while reviewing.
 
 The "Type" button at the top allows you to select the type of note you’d
 like to add. For more information about note types, please see the
-introduction in the [computer version’s
-manual](https://docs.ankiweb.net/getting-started.html#note-types).
+introduction in the [computer version’s manual](https://docs.ankiweb.net/getting-started.html#note-types).
 
 When you tap on a field, a keyboard will come up, allowing you to type
 in information. You can use the next and previous buttons to move
@@ -15,32 +14,32 @@ between fields.
 
 The toolbar has the following icons:
 
-**B I U**  
+**B I U**\
 Mark the text as bold, italics or underline.
 
-**Fx**  
+**Fx**\
 Remove formatting.
 
-**Paintbrush**  
+**Paintbrush**\
 Only available in iOS 13+. Sets the text color.
 
-**Paperclip/Camera**  
+**Paperclip/Camera**\
 Allows you to add media files from the camera, microphone, photo library
 or from a file. On iPads, the mic button is shown separately.
 
-**Pen**  
+**Pen**\
 Only available on iPads on iOS 13+. Allows you to draw an image and
 attach it to the card. You can later edit a drawn image by holding two
 fingers on it.
 
-**Square root**  
+**Square root**\
 Only available in iOS 13+. Shortcuts to subscript/superscript, and
 [MathJax](mathjax.md).
 
-**Eye**  
+**Eye**\
 Shows a preview of how the card will appear when reviewed.
 
-**&lt;/&gt;**  
+**&lt;/&gt;**\
 Reveals the underlying HTML that fields are comprised of.
 
 When you’ve typed in the content of a note, hit the save button to add

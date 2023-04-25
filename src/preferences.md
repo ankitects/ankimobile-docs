@@ -12,12 +12,12 @@ covered below.
 The syncing screen allows you to customize [cloud synchronization](syncing.md) with
 AnkiWeb.
 
-**Sync Sounds & Images**  
+**Sync Sounds & Images**\
 By default, AnkiMobile will sync sounds and images as well as your cards
 and review history. If you disable this option, sounds and images will
 not be synced by AnkiMobile.
 
-**Full Sync**  
+**Full Sync**\
 The full sync button allows you to force a full upload or download of
 your cards. This is useful if you accidentally deleted some cards and
 want to revert to the local or remote version, instead of having those
@@ -32,45 +32,44 @@ sounds and images are synced.
 The review screen allows you to customize how AnkiMobile behaves when
 you’re reviewing cards.
 
-**Feedback Ticks**  
+**Feedback Ticks**\
 Flash a tick or cross in the top right to confirm your answer choice.
 
-**Tools Overlay Button**  
+**Tools Overlay Button**\
 Show the gear/cog icon on the study screen. If you prefer not to see it,
 you can assign the tools action to the top bar instead.
 
-**Tools Overlay Position**  
+**Tools Overlay Position**\
 Allows you to put the tools button on the left.
 
-**Audio Buttons**  
+**Audio Buttons**\
 Allows you to hide the play button that appears for each audio file
 you’ve placed on the card. Useful if you’d rather replay audio via the
 "Replay Audio" action bound to a swipe or tap.
 
-**Always Duck + Ignore Mute**  
+**Always Duck + Ignore Mute**\
 When enabled, AnkiMobile will quieten any music you have playing in the
 background, and will automatically play audio even when the
 mute/vibrate/silent switch is turned on.
 
-**Answer Keeps Zoom**  
+**Answer Keeps Zoom**\
 By default, if you have zoomed in on a card, the screen will zoom out
 when you reveal the answer. If you enable this option, AnkiMobile will
 not zoom out.
 
-**Never Type Answer**  
+**Never Type Answer**\
 If you have set up your cards to ask you to type in the answer (as
-explained in [this
-section](https://docs.ankiweb.net/templates/intro.html) of the
+explained in [this section](https://docs.ankiweb.net/templates/intro.html) of the
 desktop manual), AnkiMobile will display a keyboard on such cards and
 allow you to check your answer. If you find typing on a mobile device
 inconvenient, you can use this option to disable the keyboard for all
 cards.
 
-**Shake Action**  
+**Shake Action**\
 Allows you to customize what happens when you shake your device. The
 default action is to undo the previous answer.
 
-**Double Tap Prevention**  
+**Double Tap Prevention**\
 This option ignores a second tap when two taps are made in quick
 succession, so that you don’t accidentally reveal the answer or advance
 to the next card. If you review your cards very quickly, you may wish to
@@ -80,15 +79,15 @@ select a shorter detection time.
 
 These options affect the way Anki schedules cards in all decks.
 
-**New/Review Order**  
+**New/Review Order**\
 Whether Anki should introduce new cards before, after, or together with
 review cards.
 
-**Day Starts**  
+**Day Starts**\
 Controls when a new day starts and new cards become available. Default
 is 04:00, which means new cards become available at 4AM.
 
-**Learn Ahead Minutes**  
+**Learn Ahead Minutes**\
 The number of minutes to look ahead when the only cards remaining to
 review with a next repetition time in the future. The default is 20
 minutes, which means cards due to show in 10 minutes will be shown
@@ -107,18 +106,18 @@ access. For an explanation of the available actions, please see the
 
 ### Bottom Bar
 
-**Show Bottom Bar**  
+**Show Bottom Bar**\
 Hides or shows the bottom area that shows the answer buttons and card
 counts.
 
-**Remaining Count**  
+**Remaining Count**\
 Whether to show the card counts when the question side of a card is
 being shown.
 
-**Answer Buttons**  
+**Answer Buttons**\
 Whether to show the answer buttons on the answer side of a card.
 
-**Next Times**  
+**Next Times**\
 Whether to show the next study time above each of the answer buttons.
 
 ### Taps
@@ -218,8 +217,7 @@ button, and the right side of the screen to trigger the green button.
 Taps near the middle of the screen will be ignored.
 
 You can assign frequently used actions to taps for convenient access.
-For an explanation of the available actions, please see the [actions
-list](study-tools.md#actions).
+For an explanation of the available actions, please see the [actions list](study-tools.md#actions).
 
 ### Swipes
 
@@ -239,27 +237,26 @@ With the default settings:
 - Swiping right returns to the deck list
 
 You can assign frequently used actions to swipes for convenient access.
-For an explanation of the available actions, please see the [actions
-list](study-tools.md#actions).
+For an explanation of the available actions, please see the [actions list](study-tools.md#actions).
 
 ### Scratchpad
 
-**Ignore Fingers**  
+**Ignore Fingers**\
 When enabled, the scratchpad will only respond to the Apple Pencil.
 
-**Undo Clears All**  
+**Undo Clears All**\
 Reverses the behaviour of the undo button, so a quick tap clears
 everything, and a long press clears the last stroke.
 
-**Scratchpad Below Buttons**  
+**Scratchpad Below Buttons**\
 Whether the scratchpad should be placed above or below the bottom bar.
 
 ### Auto Advance
 
-**Wait for Audio**  
+**Wait for Audio**\
 Don’t advance until the current audio stops playing.
 
-**Answer Action**  
+**Answer Action**\
 Whether to bury the card, answer it, show a popup reminder, or do
 nothing.
 
@@ -267,8 +264,7 @@ nothing.
 
 From AnkiMobile 2.0.53+, you can control the study screen with a game controller
 on iOS 13+. The controller must be supported by iOS, and must provide an
-[extended controller
-profile](https://developer.apple.com/documentation/gamecontroller/gcextendedgamepad).
+[extended controller profile](https://developer.apple.com/documentation/gamecontroller/gcextendedgamepad).
 Controllers with fewer buttons can not currently be used. For more information
 on setup, please see [this page](https://support.apple.com/en-au/HT210414).
 
@@ -312,20 +308,19 @@ and tap on the backup you wish to restore to.
 If you’re unable to get AnkiMobile to start due to a serious error, you
 can still retrieve the backups from the iTunes file sharing area:
 
-1.  Connect your Apple device to your computer via the USB cable.
+1. Connect your Apple device to your computer via the USB cable.
 
-2.  Open iTunes if it doesn’t open automatically.
+2. Open iTunes if it doesn’t open automatically.
 
-3.  Locate Anki’s file sharing section with [Apple’s
-    instructions](http://support.apple.com/kb/HT4094).
+3. Locate Anki’s file sharing section with [Apple’s instructions](http://support.apple.com/kb/HT4094).
 
-4.  Drag the your backup folder from iTunes to your desktop.
+4. Drag the your backup folder from iTunes to your desktop.
 
-5.  With the computer version of Anki, create a new, empty profile via
-    File&gt;Switch Profile, and then File&gt;Import the latest backup
-    colpkg from within that profile to confirm that it’s ok. If it is
-    corrupt, you can try a previous backup. You'll need Anki 2.1.50+ to
-    open the backups.
+5. With the computer version of Anki, create a new, empty profile via
+   File&gt;Switch Profile, and then File&gt;Import the latest backup
+   colpkg from within that profile to confirm that it’s ok. If it is
+   corrupt, you can try a previous backup. You'll need Anki 2.1.50+ to
+   open the backups.
 
 ## Check Database
 

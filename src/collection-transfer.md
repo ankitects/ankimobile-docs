@@ -33,18 +33,18 @@ for the future.
 
 On your computer:
 
-1.  Open the computer version of Anki.
+1. Open the computer version of Anki.
 
-2.  Choose **File>Export** from the menu.
+2. Choose **File>Export** from the menu.
 
-3.  Click the **Export​** button. Make sure to leave "All decks"
-    and "Include scheduling information" turned on.
+3. Click the **Export​** button. Make sure to leave "All decks"
+   and "Include scheduling information" turned on.
 
-4.  Anki will automatically create a `collection.colpkg` file on
-    your desktop. If the file is named something else like
-    `deckname.apkg`, please see the previous step again. If it
-    is called `collection.apkg`, that will work - your Anki version
-    is just old.
+4. Anki will automatically create a `collection.colpkg` file on
+   your desktop. If the file is named something else like
+   `deckname.apkg`, please see the previous step again. If it
+   is called `collection.apkg`, that will work - your Anki version
+   is just old.
 
 ### Transfer the File
 
@@ -66,13 +66,13 @@ popped up and imported the file when you accepted it.
 If you transferred the file via iOS file sharing, go to AnkiMobile's
 deck list screen, and then:
 
-1.  Tap the **Add/Export** button on the bottom left.
+1. Tap the **Add/Export** button on the bottom left.
 
-2.  Choose **Import from iTunes**, then confirm the replacement.
+2. Choose **Import from iTunes**, then confirm the replacement.
 
-3.  If you receive a message about "No file found to import", please
-    check to make sure you put the `collection.colpkg` file in AnkiMobile's
-    file sharing section.
+3. If you receive a message about "No file found to import", please
+   check to make sure you put the `collection.colpkg` file in AnkiMobile's
+   file sharing section.
 
 Once complete, the decks on your device will have been replaced with the
 decks from your desktop.
@@ -101,17 +101,16 @@ the decks list.
 
 Then on your computer:
 
-1.  Connect your Apple device to your computer via the USB cable.
+1. Connect your Apple device to your computer via the USB cable.
 
-2.  Open Finder or iTunes.
+2. Open Finder or iTunes.
 
-3.  Locate Anki’s file sharing section with [Apple’s
-    instructions](http://support.apple.com/kb/HT4094).
+3. Locate Anki’s file sharing section with [Apple’s instructions](http://support.apple.com/kb/HT4094).
 
-4.  Drag the `collection.colpkg` file from Finder or iTunes to your
-    desktop.
+4. Drag the `collection.colpkg` file from Finder or iTunes to your
+   desktop.
 
-5.  Use File>Import in Anki to import the file.
+5. Use File>Import in Anki to import the file.
 
-6.  After importing, you can delete the file on your desktop if you
-    wish.
+6. After importing, you can delete the file on your desktop if you
+   wish.

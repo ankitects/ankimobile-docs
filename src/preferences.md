@@ -262,8 +262,8 @@ nothing.
 
 ### Gamepads
 
-From AnkiMobile 2.0.53+, you can control the study screen with a game controller
-on iOS 13+. The controller must be supported by iOS, and must provide an
+From AnkiMobile 2.0.53+, you can control the study screen with a game controller.
+The controller must be supported by iOS, and must provide an
 [extended controller profile](https://developer.apple.com/documentation/gamecontroller/gcextendedgamepad).
 Controllers with fewer buttons can not currently be used. For more information
 on setup, please see [this page](https://support.apple.com/en-au/HT210414).

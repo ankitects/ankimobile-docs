@@ -114,8 +114,8 @@ Marks the card, then buries it.
 Marks the card, then suspends it.
 
 **Night Mode**\
-Switch the interface between light and dark mode. On iOS 13, use the
-system dark mode setting instead.
+Switch the interface between light and dark mode, if you don't want to
+use the system setting.
 
 **Off**\
 Don’t do anything. Useful if you want to disable certain swipes, tap

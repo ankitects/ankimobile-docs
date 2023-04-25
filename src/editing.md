@@ -21,20 +21,19 @@ Mark the text as bold, italics or underline.
 Remove formatting.
 
 **Paintbrush**\
-Only available in iOS 13+. Sets the text color.
+Sets the text color.
 
 **Paperclip/Camera**\
 Allows you to add media files from the camera, microphone, photo library
 or from a file. On iPads, the mic button is shown separately.
 
 **Pen**\
-Only available on iPads on iOS 13+. Allows you to draw an image and
+Only available on iPads. Allows you to draw an image and
 attach it to the card. You can later edit a drawn image by holding two
 fingers on it.
 
 **Square root**\
-Only available in iOS 13+. Shortcuts to subscript/superscript, and
-[MathJax](mathjax.md).
+Shortcuts to subscript/superscript, and [MathJax](mathjax.md).
 
 **Eye**\
 Shows a preview of how the card will appear when reviewed.

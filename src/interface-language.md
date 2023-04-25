@@ -16,7 +16,7 @@ the list of available languages on AnkiMobile's app store page.
 
 ## App-specific settings
 
-If you are on iOS 13, you can also control the language on a per-app basis. For
+You can also control the language on a per-app basis. For
 example, if you want all apps on your device to appear in Chinese, but want Anki
 to show in English, you can do this by going to the Settings app.
 

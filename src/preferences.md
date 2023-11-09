@@ -79,10 +79,6 @@ select a shorter detection time.
 
 These options affect the way Anki schedules cards in all decks.
 
-**New/Review Order**\
-Whether Anki should introduce new cards before, after, or together with
-review cards.
-
 **Day Starts**\
 Controls when a new day starts and new cards become available. Default
 is 04:00, which means new cards become available at 4AM.

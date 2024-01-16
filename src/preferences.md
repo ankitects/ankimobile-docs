@@ -247,15 +247,6 @@ everything, and a long press clears the last stroke.
 **Scratchpad Below Buttons**\
 Whether the scratchpad should be placed above or below the bottom bar.
 
-### Auto Advance
-
-**Wait for Audio**\
-Don’t advance until the current audio stops playing.
-
-**Answer Action**\
-Whether to bury the card, answer it, show a popup reminder, or do
-nothing.
-
 ### Gamepads
 
 From AnkiMobile 2.0.53+, you can control the study screen with a game controller.

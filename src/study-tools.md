@@ -43,7 +43,7 @@ longer delay.
 
 **Auto Advance**\
 Allows you to automatically reveal the answer, and automatically rate or
-bury cards. You can customize the behaviour in the preferences screen.
+bury cards. You can customize the behaviour in the deck's study options.
 
 **Bottom Bar**\
 Hides or shows the bottom bar, where the answer buttons and card counts

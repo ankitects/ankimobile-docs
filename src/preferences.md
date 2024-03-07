@@ -221,10 +221,12 @@ You can also swipe up, down, left or right across a card to trigger an
 action.
 
 To ensure swipes don’t interfere with your ability to scroll on a large
-card or select text, a swipe must begin from the far left or right side
+card or select text, a vertical swipe must begin from the far left or right side
 of the screen. Begin by placing your finger on the left or right side of
-the screen, and then move it up, down, left or right to trigger the
+the screen, and then move it up or down to trigger the
 relevant swipe.
+
+Horizontal swipes can be begun from any point on the screen.
 
 With the default settings:
 

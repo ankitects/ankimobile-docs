@@ -1,6 +1,12 @@
 # AnkiMobile beta testing
 
-Any existing AnkiMobile user that syncs with AnkiWeb is welcome to become a beta tester - please just post a [private ticket](https://anki.tenderapp.com/discussions/private) requesting an invite. If you sync AnkiMobile with a different AnkiWeb ID, please include your AnkiWeb ID in the message as well.
+## Joining
+
+Beta testing is open to existing AnkiMobile users. To join the beta testing program, you must be using the latest version from the app store, and you must be syncing to AnkiWeb.
+
+To join, please post a [private ticket](https://anki.tenderapp.com/discussions/private) requesting an invite.  If you sync AnkiMobile with a different email address, please include your AnkiWeb ID in the message as well.
+
+## Switching to/from stable
 
 Switching between beta versions and stable versions will preserve any cards you have on your device. But just to be safe, please sync any changes you've made to AnkiWeb before switching versions.
 

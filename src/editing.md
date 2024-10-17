@@ -52,8 +52,9 @@ The edit screen is similar to the adding screen mentioned above, with
 some key differences:
 
 - There is no note type selection button or deck selection button. If
-  you want to change the type of an existing note, you currently need
-  to do so with the computer version of Anki.
+  you want to change the type of an existing note, go to the "Browse"
+  screen, tap the checkmark button at the upper right corner, select
+  the card, then use Actions->Change Notetype.
 
 - There is a "Tools" button at the top of the screen. Tapping on it
   will allow you to perform actions on the current card or note.

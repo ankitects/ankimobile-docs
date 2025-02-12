@@ -17,14 +17,15 @@ By default, AnkiMobile will sync sounds and images as well as your cards
 and review history. If you disable this option, sounds and images will
 not be synced by AnkiMobile.
 
-**Full Sync**\
-The full sync button allows you to force a full upload or download of
-your cards. This is useful if you accidentally deleted some cards and
+**One-Way Sync**\
+The One-Way Sync button allows you to force a full upload or download of
+your collection. This is useful if you accidentally deleted some cards and
 want to revert to the local or remote version, instead of having those
-deletions propagate to other devices. After tapping the button, you’ll
+deletions propagate to other devices. After tapping the button and confirming, 
+the Synchronize button on the deck list will turn red. The next time you sync you’ll
 be given a choice of whether you want to upload your collection or
 download it from AnkiWeb. Please note this option only affects how
-cards, notes and review history is transferred - it does not change how
+cards, notes and review history are transferred - it does not change how
 sounds and images are synced.
 
 ## Review

@@ -18,7 +18,7 @@ up.
 From 2.0.30 onwards, AnkiMobile provides a scheme for adding new notes
 to your collection. This can be used with dictionary apps that support
 calling other apps via URL schemes, and with automation apps like
-Workflow.
+[Shortcuts](https://support.apple.com/guide/shortcuts/welcome/ios).
 
 The scheme to add cards looks like this:
 

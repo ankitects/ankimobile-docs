@@ -16,6 +16,8 @@ default. If you use the optional synchronization feature, please see
 
 **Trademarks**
 
+Anki is a registered trademark of Ankitects Pty Ltd.
+
 Apple, the Apple logo, iPhone, iPad and iPod Touch are trademarks of
 Apple Inc., registered in the U.S. and other countries. App Store is a
 service mark of Apple Inc.

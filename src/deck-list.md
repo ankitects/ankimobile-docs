@@ -14,7 +14,7 @@ and you can customize this number in the deck options if you’d like.
 To study cards in a deck, simply tap on the deck, and AnkiMobile will
 switch to study mode.
 
-If you wish to rename or delete a deck, swipe your finger from right to
+If you wish to export, rename, or delete a deck, swipe your finger from right to
 left over it, and buttons will appear.
 
 At the top of the screen, you’ll see four buttons.
@@ -27,12 +27,14 @@ At the top of the screen, you’ll see four buttons.
 
 - The gear/cog opens the preferences screen.
 
-On the bottom of the screen, there are two more buttons. **Add/Export**
-allows you to download shared decks, add/create an empty deck, and
-import/export .apkg files from iTunes. **Synchronize** synchronizes your
-cards with the cloud.
+On the bottom of the screen, there are two more buttons. 
 
-The synchronize button will change color if you have made changes that
+- **Add/Export** allows you to download shared decks, add/create an empty deck, 
+import `.apkg` files from iTunes, and export your entire collection.
+   - To import an `.apkg` or [properly formatted](https://docs.ankiweb.net/importing/text-files.html) plain-text `.csv`/`.tsv` file that you have saved on your device, tap on the file in your file manager and open it in AnkiMobile.
+
+- **Synchronize** synchronizes your cards with the cloud.
+   - The synchronize button will change color if you have made changes that
 need to be synchronized to AnkiWeb, or if changes are waiting on AnkiWeb
 that need to be synchronized to the device. One of the changes that Anki
 synchronizes to other clients is the current deck, so tapping on a deck

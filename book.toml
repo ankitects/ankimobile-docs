@@ -20,3 +20,26 @@ renderer = ["html"]
 optional = true
 warning-policy = "warn"
 follow-web-links = true
+
+[output.html.redirect]
+"/index.html" = "https://docs.ankiweb.net/ankimobile/intro"
+"/study-tools.html" = "https://docs.ankiweb.net/ankimobile/study-tools" 
+"/custom-fonts.html" = "https://docs.ankiweb.net/ankimobile/custom-fonts" 
+"/mathjax.html" = "https://docs.ankiweb.net/ankimobile/mathjax" 
+"/deck-list.html" = "https://docs.ankiweb.net/ankimobile/deck-list" 
+"/editing.html" = "https://docs.ankiweb.net/ankimobile/editing" 
+"/tts.html" = "https://docs.ankiweb.net/ankimobile/tts" 
+"/study-screen.html" = "https://docs.ankiweb.net/ankimobile/study-screen" 
+"/support.html" = "https://docs.ankiweb.net/ankimobile/support" 
+"/beta-testing.html" = "https://docs.ankiweb.net/ankimobile/beta-testing" 
+"/preferences.html" = "https://docs.ankiweb.net/ankimobile/preferences" 
+"/night-mode.html" = "https://docs.ankiweb.net/ankimobile/night-mode" 
+"/url-schemes.html" = "https://docs.ankiweb.net/ankimobile/url-schemes" 
+"/shared-decks.html" = "https://docs.ankiweb.net/ankimobile/shared-decks" 
+"/intro.html" = "https://docs.ankiweb.net/ankimobile/intro" 
+"/collection-transfer.html" = "https://docs.ankiweb.net/ankimobile/collection-transfer" 
+"/syncing.html" = "https://docs.ankiweb.net/ankimobile/syncing" 
+"/reinstalling.html" = "https://docs.ankiweb.net/ankimobile/reinstalling" 
+"/interface-language.html" = "https://docs.ankiweb.net/ankimobile/interface-language" 
+"/more.html" = "https://docs.ankiweb.net/ankimobile/more" 
+
